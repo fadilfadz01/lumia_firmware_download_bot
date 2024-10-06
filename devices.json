@@ -16,7 +16,7 @@
         "ProductCodes": [
             {"ProductCode": "059W0K2", "PackageTitle": "RM-1017 SS ROW NDT CE", "Firmware": "1068.00010.14213.00000", "OS": null, "DownloadID": 8},
             {"ProductCode": "059W240", "PackageTitle": "PWBASSY RM-1017 LIGHT SWAP ENGINE GLOBAL", "Firmware": "01068.00016.14263.31001", "OS": null, "DownloadID": 9},
-            {"ProductCode": "059W241", "PackageTitle": "RM-1017 GLOBAL SWAP"},
+            {"ProductCode": "059W241", "PackageTitle": "RM-1017 GLOBAL SWAP", "Firmware": "01068.00016.14263.31001", "OS": null, "DownloadID": 10},
             {"ProductCode": "059W310", "PackageTitle": "RM-1017 VAR EURO GB CV"},
             {"ProductCode": "059W379", "PackageTitle": "RM-1017 VAR EURO IT CV"},
             {"ProductCode": "059W3M6", "PackageTitle": "RM-1017 VAR EURO 3V CV"},

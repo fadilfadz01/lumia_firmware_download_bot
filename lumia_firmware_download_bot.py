@@ -11,7 +11,6 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 # Replace with your bot token
 load_dotenv()
 API_TOKEN = os.getenv("API_TOKEN")
-SUPER_ADMIN = int(os.getenv("SUPER_ADMIN"))
 REPO_CHANNEL = int(os.getenv("REPO_CHANNEL"))
 UPLOAD_CHANNEL = int(os.getenv("UPLOAD_CHANNEL"))
 REQUEST_CHANNEL = int(os.getenv("REQUEST_CHANNEL"))
@@ -20,17 +19,48 @@ UNBLOCK_CHANNEL = int(os.getenv("UNBLOCK_CHANNEL"))
 user_states = {}
 bot = telebot.TeleBot(API_TOKEN)
 
-with open(f'{current_dir}/devices.json', 'r') as devices_file:
-    devices = json.load(devices_file)
-
 print("bot started running")
 
 
-def is_user_admin(user):
-    with open(f'{current_dir}/admins.json', 'r') as admins_file:
-        admins = json.load(admins_file)
+def super_admins():
+    load_dotenv(override=True)
+    return [int(admin_id.strip()) for admin_id in os.getenv("SUPER_ADMIN", "").split(',') if admin_id.strip()]
 
-    if user.from_user.id in admins or user.from_user.id == SUPER_ADMIN:
+
+def load_json(file_name):
+    try:
+        with open(f'{current_dir}/{file_name}', 'r') as json_file:
+            return json.load(json_file)
+    except:
+        with open(f'{current_dir}/{file_name}', 'w') as json_file:
+            json.dump([], json_file, indent=4)
+            return []
+
+
+def dump_json(file_name, data):
+    with open(f'{current_dir}/{file_name}', 'w') as json_file:
+        return json.dump(data, json_file, indent=4)
+
+
+def is_user_id_valid(user_id, chat, check_exist=True):
+    try:
+        int(user_id)
+        if check_exist:
+            try:
+                bot.get_chat(int(user_id))
+            except:
+                bot.reply_to(chat, "This user ID does not exist.")
+                return False
+
+        return True
+    except:
+        bot.reply_to(chat, "Please enter a valid user ID.")
+        return False
+
+
+def is_user_admin(user):
+    admins = load_json('admins.json')
+    if any(admin['UserID'] == user.from_user.id for admin in admins) or user.from_user.id in super_admins():
         return True
     else:
         bot.reply_to(user, "You do not have admin privileges to use this request.")
@@ -38,19 +68,15 @@ def is_user_admin(user):
 
 
 def is_user_admin_by_id(user_id):
-    with open(f'{current_dir}/admins.json', 'r') as admins_file:
-        admins = json.load(admins_file)
-
-    if user_id in admins or user_id == SUPER_ADMIN:
+    admins = load_json('admins.json')
+    if any(admin['UserID'] == user_id for admin in admins) or user_id in super_admins():
         return True
     else:
         return False
 
 
 def is_user_blocked(user):
-    with open(f'{current_dir}/blocked.json', 'r') as blocked_file:
-        blocked_users = json.load(blocked_file)
-
+    blocked_users = load_json('blocked.json')
     for blocked_user in blocked_users:
         if blocked_user['UserID'] == user.from_user.id:
             bot.reply_to(user, f"You have been blocked. Use /unblock to request to be unblocked.\n\n<b>"
@@ -60,19 +86,14 @@ def is_user_blocked(user):
     return False
 
 
-def load_user_data():
-    with open(f'{current_dir}/users.json', 'r') as users_file:
-        return json.load(users_file)
-
-
 def check_user_limit(user_info):
     time_left = None
-    users = load_user_data()
+    users = load_json('users.json')
     current_time = datetime.now()
     user_requests = next((user for user in users if user['UserID'] == user_info.id), None)
 
     if user_requests is None:
-        user_requests = {'UserID': user_info.id, "FullName": user_info.full_name, "UserName": user_info.username,
+        user_requests = {'UserID': user_info.id, "Fullname": user_info.full_name, "Username": f"@{user_info.username}",
                          "Bot": user_info.is_bot, 'TotalRequests': 0,
                          'LastRequested': current_time.strftime("%Y-%m-%d %H:%M:%S")}
         users.append(user_requests)
@@ -87,44 +108,47 @@ def check_user_limit(user_info):
     else:
         user_requests['LastRequested'] = current_time.strftime("%Y-%m-%d %H:%M:%S")
 
-    with open(f'{current_dir}/users.json', 'w') as json_file:
-        json.dump(users, json_file, indent=4)
+    dump_json('users.json', users)
 
     return True, user_requests, time_left
 
 
 def save_user_data(user_info):
-    users = load_user_data()
+    users = load_json('users.json')
     user_requests = next((user for user in users if user['UserID'] == user_info.id), None)
 
     if user_requests is not None:
         user_requests['TotalRequests'] += 1  # Increment the count
-    with open(f'{current_dir}/users.json', 'w') as json_file:
-        json.dump(users, json_file, indent=4)
+
+    dump_json('users.json', users)
 
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
+    print(message.from_user.full_name)
+
     if is_user_blocked(message):
         return
 
-    users = load_user_data()
+    users = load_json('users.json')
     user_requests = next((user for user in users if user['UserID'] == message.from_user.id), None)
 
-    if user_requests is None and not is_user_admin_by_id(message.from_user.id):
-        user_requests = {'UserID': message.from_user.id, "FullName": message.from_user.full_name,
-                         "UserName": message.from_user.username,
+    if user_requests is None:
+        user_requests = {'UserID': message.from_user.id, "Fullname": message.from_user.full_name,
+                         "Username": f"@{message.from_user.username}",
                          "Bot": message.from_user.is_bot, 'TotalRequests': 0,
                          'LastRequested': datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
         users.append(user_requests)
-
-        with open(f'{current_dir}/users.json', 'w') as json_file:
-            json.dump(users, json_file, indent=4)
 
         bot.send_message(message.chat.id,
                          'Hey there <a href="tg://user?id={}">{}</a>, and welcome to the Lumia Firmware Download Bot! '
                          'Use /download to get started with me.'.format(
                              message.from_user.id, message.from_user.first_name), parse_mode='HTML')
+
+        if is_user_admin_by_id(message.from_user.id):
+            return
+
+        dump_json('users.json', users)
     else:
         bot.send_message(message.chat.id,
                          'Hey there <a href="tg://user?id={}">{}</a>, '
@@ -133,7 +157,7 @@ def send_welcome(message):
 
 
 @bot.message_handler(commands=['download'])
-def download_file(message):
+def download_firmware(message):
     if is_user_blocked(message):
         return
 
@@ -148,6 +172,7 @@ def download_file(message):
             return
 
     markup = ReplyKeyboardMarkup(one_time_keyboard=True, resize_keyboard=True, row_width=2)
+    devices = load_json('devices.json')
     buttons = [
         KeyboardButton(device['ProductType'])
         for device in devices
@@ -161,7 +186,7 @@ def download_file(message):
 
 
 @bot.message_handler(commands=['upload'])
-def upload_file(message):
+def upload_firmware(message):
     if is_user_blocked(message):
         return
 
@@ -174,7 +199,7 @@ def upload_file(message):
 
 
 @bot.message_handler(commands=['request'])
-def request_file(message):
+def request_firmware(message):
     if is_user_blocked(message):
         return
 
@@ -192,6 +217,7 @@ def request_file(message):
     product_type = params[1].upper()
     product_code = params[2].upper()
 
+    devices = load_json('devices.json')
     device = next((d for d in devices if d['ProductType'] == product_type), None)
     valid_product_type = device is not None
     valid_product_code = False
@@ -204,9 +230,9 @@ def request_file(message):
         already_exists = code.get('DownloadID') is not None if code else False
 
     if not valid_product_type:
-        bot.reply_to(message, "Please type a valid product type.")
+        bot.reply_to(message, "Please enter a valid product type.")
     elif not valid_product_code:
-        bot.reply_to(message, "Please type a valid product code.")
+        bot.reply_to(message, "Please enter a valid product code.")
     elif already_exists:
         bot.reply_to(message, f"The requested firmware for product type `{product_type}` with "
                               f"product code `{product_code}` is already in the repository\.",
@@ -214,7 +240,7 @@ def request_file(message):
     else:
         bot.send_message(REQUEST_CHANNEL, f"<b>User ID:</b> {message.from_user.id}\n"
                                           f"<b>Fullname:</b> {message.from_user.full_name}\n"
-                                          f"<b>Username:</b> {message.from_user.username}\n"
+                                          f"<b>Username:</b> @{message.from_user.username}\n"
                                           f"<b>Product Type:</b> {product_type}\n"
                                           f"<b>Product Code:</b> {product_code}",
                          parse_mode='HTML')
@@ -237,14 +263,14 @@ def request_unblock(message):
 
     bot.send_message(UNBLOCK_CHANNEL, f"<b>User ID:</b> {message.from_user.id}\n"
                                       f"<b>Fullname:</b> {message.from_user.full_name}\n"
-                                      f"<b>Username:</b> {message.from_user.username}\n"
+                                      f"<b>Username:</b> @{message.from_user.username}\n"
                                       f"<b>Reason:</b> {message.text.split(' ', 1)[1]}",
                      parse_mode='HTML')
 
 
 @bot.message_handler(commands=['add_admin'])
 def add_admin(message):
-    if not message.chat.id == SUPER_ADMIN:
+    if message.chat.id not in super_admins():
         bot.reply_to(message, "Only super admin can use this request.")
         return
 
@@ -256,18 +282,23 @@ def add_admin(message):
                      parse_mode='HTML')
         return
 
-    with open(f'{current_dir}/admins.json', 'r') as json_file:
-        admins = json.load(json_file)
+    admins = load_json('admins.json')
 
-    try:
-        int(params[1])
-    except:
-        bot.reply_to(message, "Please type a valid user ID.")
+    if not is_user_id_valid(params[1], message):
         return
-    if not int(params[1]) in admins and not int(params[1]) == SUPER_ADMIN:
-        admins.append(int(params[1]))
-        with open(f'{current_dir}/admins.json', 'w') as json_file:
-            json.dump(admins, json_file, indent=4)
+
+    user_id = int(params[1])
+
+    blocked_users = load_json('blocked.json')
+    if any(blocked_user["UserID"] == user_id for blocked_user in blocked_users):
+        bot.reply_to(message, "You cannot promote a user who is blocked from using the bot.")
+        return
+
+    if user_id not in admins and user_id not in super_admins():
+        user = bot.get_chat(user_id)
+
+        admins.append({"UserID": user.id, "Fullname": f"{user.first_name} {user.last_name}", "Username": f"@{user.username}"})
+        dump_json('admins.json', admins)
 
         bot.reply_to(message, "The user has been promoted to admin privileges.")
     else:
@@ -276,10 +307,64 @@ def add_admin(message):
 
 @bot.message_handler(commands=['remove_admin'])
 def remove_admin(message):
-    if not message.chat.id == SUPER_ADMIN:
+    if message.chat.id not in super_admins():
         bot.reply_to(message, "Only super admin can use this request.")
         return
-    bot.reply_to(message, "Coming soon...")
+
+    params = message.text.split()
+
+    if len(params) < 2:
+        bot.reply_to(message, "<b>Usage:</b>\n\t/remove_admin &lt;UserID&gt;\n\n"
+                              "<b>Example:</b>\n\t\t<code>/remove_admin 1234567890</code>",
+                     parse_mode='HTML')
+        return
+
+    admins = load_json('admins.json')
+
+    if not is_user_id_valid(params[1], message, False):
+        return
+
+    user_id = int(params[1])
+
+    if user_id in super_admins():
+        bot.reply_to(message, "You cannot demote a super admin.")
+        return
+    elif any(admin['UserID'] == user_id for admin in admins):
+        admins = [admin for admin in admins if admin['UserID'] != user_id]
+        dump_json('admins.json', admins)
+
+        bot.reply_to(message, "The user has been demoted from admin privileges.")
+    else:
+        bot.reply_to(message, "The user is already not an admin.")
+
+
+@bot.message_handler(commands=['notify_all'])
+def notify_users(message):
+    if message.chat.id not in super_admins():
+        bot.reply_to(message, "Only super admin can use this request.")
+        return
+
+    user_states[message.from_user.id] = 'awaiting_forward_message'
+    bot.reply_to(message, "Send or forward the message you would like to notify.\nUse /cancel to cancel the action.")
+
+
+@bot.message_handler(commands=['list_admins'])
+def list_admins(message):
+    if not is_user_admin(message):
+        return
+
+    admins = load_json('admins.json')
+
+    content = str()
+    for admin in admins:
+        content += (f"\t- UserID: <code>{admin['UserID']}</code>, "
+                    f"Fullname: <code>{admin['Fullname']}</code>, "
+                    f"Username: {admin['Username']}\n\n")
+
+    if admins:
+        bot.reply_to(message, f"<b>Admin Users</b>\n{content}", parse_mode='HTML')
+    else:
+        bot.reply_to(message, "<b>Admin Users</b>\nThere are currently no admins to display.", parse_mode='HTML')
 
 
 @bot.message_handler(commands=['get_id'])
@@ -287,9 +372,35 @@ def get_user_id(message):
     if not is_user_admin(message):
         return
 
-    user_states[message.from_user.id] = 'awaiting_forward_message'
+    user_states[message.from_user.id] = 'awaiting_user_message'
     bot.reply_to(message, "Please forward a message from the user you wish to retrieve their user ID.\n"
                           "Use /cancel to cancel the action.", reply_markup=ReplyKeyboardRemove())
+
+
+@bot.message_handler(commands=['get_info'])
+def get_user_info(message):
+    if not is_user_admin(message):
+        return
+
+    params = message.text.split()
+
+    if len(params) < 2:
+        bot.reply_to(message, "<b>Usage:</b>\n\t/get_info &lt;UserID&gt;\n\n"
+                              "<b>Example:</b>\n\t\t<code>/get_info 1234567890</code>",
+                     parse_mode='HTML')
+        return
+
+    if not is_user_id_valid(params[1], message):
+        return
+
+    user_id = int(params[1])
+
+    user = bot.get_chat(user_id)
+    bot.reply_to(message, f"<b>Fullname:</b> {user.first_name} {user.last_name}\n"
+                          f"<b>Username:</b> @{user.username}\n"
+                          f"<b>Type:</b> {user.type}\n"
+                          f"<b>Bio:</b> {user.bio}\n",
+                 parse_mode='HTML')
 
 
 @bot.message_handler(commands=['block_user'])
@@ -305,27 +416,26 @@ def block_user(message):
                      parse_mode='HTML')
         return
 
-    try:
-        int(params[1])
-    except:
-        bot.reply_to(message, "Please type a valid user ID.")
+    if not is_user_id_valid(params[1], message):
         return
 
-    if is_user_admin_by_id(int(params[1])):
+    user_id = int(params[1])
+
+    if is_user_admin_by_id(user_id):
         bot.reply_to(message, "You're unable to block an admin.")
         return
 
-    with open(f'{current_dir}/blocked.json', 'r') as json_file:
-        blocked_users = json.load(json_file)
+    blocked_users = load_json('blocked.json')
 
     for blocked_user in blocked_users:
-        if blocked_user['UserID'] == int(params[1]):
+        if blocked_user['UserID'] == user_id:
             bot.reply_to(message, "The user has already been blocked.")
             return
 
-    blocked_users.append({"UserID": int(params[1]), "Reason": " ".join(message.text.split()[2:])})
-    with open(f'{current_dir}/blocked.json', 'w') as json_file:
-        json.dump(blocked_users, json_file, indent=4)
+    user = bot.get_chat(user_id)
+    blocked_users.append({"UserID": user.id, "Fullname": f"{user.first_name} {user.last_name}",
+                          "Username": f"@{user.username}", "Reason": " ".join(message.text.split()[2:])})
+    dump_json('blocked.json', blocked_users)
 
     bot.reply_to(message, f"Successfully blocked the user ID `{params[1]}`", parse_mode='MarkdownV2')
 
@@ -343,18 +453,19 @@ def unblock_user(message):
                      parse_mode='HTML')
         return
 
-    with open(f'{current_dir}/blocked.json', 'r') as json_file:
-        blocked_users = json.load(json_file)
+    blocked_users = load_json('blocked.json')
 
-    try:
-        int(params[1])
-    except:
-        bot.reply_to(message, "Please type a valid user ID.")
+    if not is_user_id_valid(params[1], message, False):
         return
 
-    blocked_users = [user for user in blocked_users if user["UserID"] != int(params[1])]
-    with open(f'{current_dir}/blocked.json', 'w') as json_file:
-        json.dump(blocked_users, json_file, indent=4)
+    user_id = int(params[1])
+
+    if not any(blocked_user["UserID"] == user_id for blocked_user in blocked_users):
+        bot.reply_to(message, "The user is not blocked, so there is no need to unblock them.")
+        return
+
+    blocked_users = [blocked_user for blocked_user in blocked_users if blocked_user["UserID"] != user_id]
+    dump_json('blocked.json', blocked_users)
 
     bot.reply_to(message, f"Successfully unblocked the user ID `{params[1]}`", parse_mode='MarkdownV2')
 
@@ -364,28 +475,35 @@ def blocked_users_list(message):
     if not is_user_admin(message):
         return
 
-    with open(f'{current_dir}/blocked.json', 'r') as json_file:
-        blocked_users = json.load(json_file)
+    blocked_users = load_json('blocked.json')
 
     content = str()
     for blocked_user in blocked_users:
-        content += f"UserID: <code>{blocked_user['UserID']}</code>,  Reason: <code>{blocked_user['Reason']}</code>\n"
+        content += (f"\t- UserID: <code>{blocked_user['UserID']}</code>, "
+                    f"Fullname: <code>{blocked_user['Fullname']}</code>, "
+                    f"Username: {blocked_user['Username']}, "
+                    f"Reason: <code>{blocked_user['Reason']}</code>\n\n")
+
     if blocked_users:
-        bot.reply_to(message, f"<b>Blocked Users</b>\n\n{content}", parse_mode='HTML')
+        bot.reply_to(message, f"<b>Blocked Users</b>\n{content}", parse_mode='HTML')
     else:
-        bot.reply_to(message, "<b>Blocked Users</b>\n\nThere are no blocked users in the list.", parse_mode='HTML')
+        bot.reply_to(message, "<b>Blocked Users</b>\nThere are no blocked users in the list.", parse_mode='HTML')
 
 
 @bot.message_handler(commands=['administrators'])
 def bot_administrators(message):
     if is_user_admin(message):
-        bot.reply_to(message, "<b>Admin Commands</b>\n\n"
+        bot.reply_to(message, "<b>Super Admin Commands</b>\n"
                               "/add_admin - Promote a user to admin privileges.\n"
                               "/remove_admin - Demote a user from admin privileges.\n"
+                              "/notify_all - Send a message to all the bot users.\n\n"
+                              "<b>Admin Commands</b>\n"
+                              "/list_admins - Display the list of admins.\n"
                               "/get_id - Retrieve the user ID of a user.\n"
+                              "/get_info - Retrieve the user info of a user.\n"
                               "/block_user - Block a user from using the bot.\n"
                               "/unblock_user - Unblock a user from using the bot.\n"
-                              "/blocked_users - Display the list of blocked user.", parse_mode='HTML')
+                              "/blocked_users - Display the list of blocked users.", parse_mode='HTML')
 
 
 @bot.message_handler(commands=['cancel'])
@@ -406,6 +524,7 @@ def cancel_process(message):
 def handle_product_type(message):
     markup = ReplyKeyboardMarkup(one_time_keyboard=True, resize_keyboard=True, row_width=2)
 
+    devices = load_json('devices.json')
     if any(device['ProductType'] == message.text.upper() for device in devices):
         buttons = [
             KeyboardButton(product_codes['ProductCode'])
@@ -429,12 +548,13 @@ def handle_product_type(message):
                          parse_mode='MarkdownV2', reply_markup=ReplyKeyboardRemove())
 
     else:
-        bot.reply_to(message, "Please select a valid product type.")
+        bot.reply_to(message, "Please select a valid product type.\nUse /cancel to cancel the action.")
 
 
 @bot.message_handler(func=lambda message: message.from_user.id in user_states and user_states[
     message.from_user.id] == 'awaiting_product_code')
 def handle_product_code(message):
+    devices = load_json('devices.json')
     if any(product_codes['ProductCode'] == message.text.upper()
            for device in devices
            for product_codes in device['ProductCodes']):
@@ -467,7 +587,7 @@ def handle_product_code(message):
                          parse_mode='MarkdownV2', reply_markup=ReplyKeyboardRemove())
 
     else:
-        bot.reply_to(message, "Please select a valid product code.")
+        bot.reply_to(message, "Please select a valid product code.\nUse /cancel to cancel the action.")
 
 
 @bot.message_handler(content_types=['document'],
@@ -487,20 +607,52 @@ def handle_upload_file(message):
         bot.reply_to(message, "Thank you for helping us extend the repository. "
                               "We will review this firmware package and add it to the repository soon.")
     else:
-        bot.reply_to(message, "Sorry, the firmware package must be in ZIP format.")
+        bot.reply_to(message, "Sorry, the firmware package must be in ZIP format. Please send a new one.\n"
+                              "Use /cancel to cancel the action.")
+
+
+@bot.message_handler(content_types=['text', 'document'],
+                     func=lambda message: message.from_user.id in user_states and user_states[
+                         message.from_user.id] == 'awaiting_forward_message')
+def handle_forward_message(message):
+    users = load_json('users.json')
+    admins = load_json('admins.json')
+
+    # Clear the user's state after handling the request
+    del user_states[message.from_user.id]
+
+    # Function to send messages
+    def send_message(target_id, content, content_type):
+        try:
+            bot.get_chat(target_id)
+        except:
+            return
+        if content_type == 'text':
+            bot.send_message(target_id, content.text)
+        elif content_type == 'document':
+            bot.send_document(target_id, content.document.file_id, caption=content.caption)
+
+    msg = bot.send_message(message.chat.id, "Notifying users... please hold on.", reply_markup=ReplyKeyboardRemove())
+
+    # Notify all users and admins
+    for target in users + admins:
+        send_message(target["UserID"], message, message.content_type)
+
+    bot.delete_message(message.chat.id, msg.message_id)
+    bot.reply_to(message, "All users have been notified.")
 
 
 @bot.message_handler(func=lambda message: message.from_user.id in user_states and user_states[
-    message.from_user.id] == 'awaiting_forward_message')
+    message.from_user.id] == 'awaiting_user_message')
 def handle_user_id(message):
+    # Clear the user's state after handling the request
+    del user_states[message.from_user.id]
+
     if message.forward_from:
         bot.reply_to(message, f"User ID: `{message.forward_from.id}`", parse_mode='MarkdownV2')
-
-        # Clear the user's state after handling the request
-        del user_states[message.from_user.id]
     else:
-        bot.reply_to(message, "Couldn't retrieve the user ID.\nThis may be because you are forwarding a message"
-                              " from a hidden user, or you are not forwarding a message at all.")
+        bot.reply_to(message, "Couldn't retrieve the user ID.\nThis may be because you are forwarding a message "
+                              "from a hidden user, or you are not forwarding a message at all.")
 
 
 # Start polling
