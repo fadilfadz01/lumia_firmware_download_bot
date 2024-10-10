@@ -22,6 +22,7 @@ Recently, the Lumia firmware software repository server went down unexpectedly (
 ### Super admin commands:
 * add_admin - Promote a user to admin privileges.
 * remove_admin - Demote a user from admin privileges.
+* text_user - Send a message to a bot user.
 * notify_all - Send a message to all the bot users.
 
 [Try it out](https://t.me/lumia_firmware_download_bot)

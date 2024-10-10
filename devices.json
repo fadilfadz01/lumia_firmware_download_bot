@@ -56,7 +56,7 @@
             {"ProductCode": "059W589", "PackageTitle": "RM-1017 VAR EURO GR VF"},
             {"ProductCode": "059W591", "PackageTitle": "RM-1017 VAR EURO GB VF SL"},
             {"ProductCode": "059W592", "PackageTitle": "RM-1017 VAR EURO CH SWISSCOM SL"},
-            {"ProductCode": "059W593", "PackageTitle": "EOL RM-1017 VAR EURO 9T CV"},
+            {"ProductCode": "059W593", "PackageTitle": "EOL RM-1017 VAR EURO 9T CV", "Firmware": "02074.00000.15234.28003", "OS": "8.10.14234.375", "DownloadID": 11},
             {"ProductCode": "059W595", "PackageTitle": "RM-1017 VAR EURO IT VF"},
             {"ProductCode": "059W596", "PackageTitle": "RM-1017 VAR EURO HR VIPNET SL"},
             {"ProductCode": "059W597", "PackageTitle": "RM-1017 VAR EURO HU TELENOR SL"},
@@ -105,7 +105,7 @@
             {"ProductCode": "059W519", "PackageTitle": "RM-1018 VAR LTA PE CLARO SL"},
             {"ProductCode": "059W579", "PackageTitle": "RM-1018 VAR APAC AU CV"},
             {"ProductCode": "059W580", "PackageTitle": "RM-1018 VAR APAC AU OPTUS SL"},
-            {"ProductCode": "059W581", "PackageTitle": "RM-1018 VAR APAC AU TELSTRA SL"},
+            {"ProductCode": "059W581", "PackageTitle": "RM-1018 VAR APAC AU TELSTRA SL", "Firmware": "02074.00000.15234.28014", "OS": "8.10.14234.375", "DownloadID": 12},
             {"ProductCode": "059W582", "PackageTitle": "RM-1018 VAR APAC NZ VF SL"},
             {"ProductCode": "059W583", "PackageTitle": "RM-1018 VAR APAC NZ TELECOM"},
             {"ProductCode": "059W588", "PackageTitle": "RM-1018 VAR LTA MX TELCEL"},
@@ -147,7 +147,7 @@
             {"ProductCode": "059W454", "PackageTitle": "RM-1019 VAR IMEA 9L CV"},
             {"ProductCode": "059W460", "PackageTitle": "RM-1019 VAR IMEA IR CV"},
             {"ProductCode": "059W461", "PackageTitle": "RM-1019 VAR IMEA 9Z CV"},
-            {"ProductCode": "059W462", "PackageTitle": "RM-1019 VAR EURO 6A CV"},
+            {"ProductCode": "059W462", "PackageTitle": "RM-1019 VAR EURO 6A CV", "Firmware": "02074.00000.15234.28004", "OS": "8.10.14234.375", "DownloadID": 13},
             {"ProductCode": "059W466", "PackageTitle": "RM-1019 VAR IMEA 4Y CV"},
             {"ProductCode": "059W4J5", "PackageTitle": "RM-1019 VAR EURO DE CV"},
             {"ProductCode": "059W4R4", "PackageTitle": "RM-1019 VAR EURO 7F CV"},
@@ -168,7 +168,7 @@
         "ModelName": "Lumia 530 Dual SIM",
         "ProductCodes": [
             {"ProductCode": "059W054", "PackageTitle": "RM-1020 DS BRAZIL CTR FOR RELEASE PREP"},
-            {"ProductCode": "059W349", "PackageTitle": "RM-1020 VAR LTA BR CV"},
+            {"ProductCode": "059W349", "PackageTitle": "RM-1020 VAR LTA BR CV", "Firmware": "02074.00000.15234.28005", "OS": "8.10.14234.375", "DownloadID": 14},
             {"ProductCode": "059W355", "PackageTitle": "RM-1020 VAR APAC TH CV"},
             {"ProductCode": "059W484", "PackageTitle": "RM-1020 VAR LTA BR VIVO"},
             {"ProductCode": "059W494", "PackageTitle": "RM-1020 VAR LTA BR CLARO"},
@@ -184,7 +184,7 @@
             {"ProductCode": "059V3K6", "PackageTitle": "RM-1027 CTR R&D SECURED CSFB"},
             {"ProductCode": "059V837", "PackageTitle": "PWBASSY RM-1027 LIGHT SWAP ENGINE CN"},
             {"ProductCode": "059W0P0", "PackageTitle": "RM-1027 VAR APAC CN UNICOM"},
-            {"ProductCode": "059W245", "PackageTitle": "RM-1027 VAR APAC HK CV"},
+            {"ProductCode": "059W245", "PackageTitle": "RM-1027 VAR APAC HK CV", "Firmware": "02040.00021.15235.50009", "OS": "8.10.14234.375", "DownloadID": 46},
             {"ProductCode": "059W2W3", "PackageTitle": "RM-1027 VAR APAC PH CV"},
             {"ProductCode": "059W2W4", "PackageTitle": "RM-1027 VAR APAC PH SMARTCOM SL"},
             {"ProductCode": "059W5S8", "PackageTitle": "RM-1027 VAR APAC AU OPTUS"}
@@ -192,7 +192,7 @@
     },
     {
         "ProductType": "RM-1031",
-        "ModelName": "Lumia 532 DS",
+        "ModelName": "Lumia 532 Dual SIM",
         "ProductCodes": [
             {"ProductCode": "059W8L3", "PackageTitle": "PWBASSY RM-1031 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059W8L4", "PackageTitle": "RM-1031 GLOBAL SWAP"},
@@ -207,7 +207,7 @@
             {"ProductCode": "059W994", "PackageTitle": "RM-1031 VAR IMEA 4K CV"},
             {"ProductCode": "059W9B2", "PackageTitle": "RM-1031 VAR IMEA PK CV"},
             {"ProductCode": "059W9K5", "PackageTitle": "RM-1031 VAR IMEA 6K CV"},
-            {"ProductCode": "059W9P7", "PackageTitle": "RM-1031 VAR EURO 6A CV"},
+            {"ProductCode": "059W9P7", "PackageTitle": "RM-1031 VAR EURO 6A CV", "Firmware": "02074.00000.15234.28004", "OS": "8.10.14234.375", "DownloadID": 15},
             {"ProductCode": "059W9Q1", "PackageTitle": "RM-1031 VAR IMEA 7P CV"},
             {"ProductCode": "059X010", "PackageTitle": "RM-1031 VAR IMEA 9L CV"},
             {"ProductCode": "059X0F7", "PackageTitle": "RM-1031 VAR EURO 7L CV"},
@@ -232,7 +232,7 @@
             {"ProductCode": "059W993", "PackageTitle": "RM-1032 VAR APAC TH CV"},
             {"ProductCode": "059W9G4", "PackageTitle": "RM-1032 VAR LTA BR TIM"},
             {"ProductCode": "059X0P5", "PackageTitle": "RM-1032 VAR LTA 7R CV"},
-            {"ProductCode": "059X0V4", "PackageTitle": "RM-1032 VAR APAC AU CV"},
+            {"ProductCode": "059X0V4", "PackageTitle": "RM-1032 VAR APAC AU CV", "Firmware": "02074.00000.15234.28005", "OS": "8.10.14234.375", "DownloadID": 16},
             {"ProductCode": "059X0V6", "PackageTitle": "RM-1032 VAR APAC PH CV"},
             {"ProductCode": "059X0V8", "PackageTitle": "RM-1032 VAR APAC PH SUN SL"},
             {"ProductCode": "059X1C7", "PackageTitle": "RM-1032 VAR LATAM BR CV"},
@@ -266,7 +266,7 @@
             {"ProductCode": "059X0T6", "PackageTitle": "RM-1034 VAR LTA MX TELCEL SL"},
             {"ProductCode": "059X0T7", "PackageTitle": "RM-1034 VAR LTA MX TELCEL"},
             {"ProductCode": "059X0Z5", "PackageTitle": "RM-1034 VAR LTA 3G CLARO"},
-            {"ProductCode": "059X164", "PackageTitle": "RM-1034 VAR EURO 9T CV"},
+            {"ProductCode": "059X164", "PackageTitle": "RM-1034 VAR EURO 9T CV", "Firmware": "02074.00000.15234.28003", "OS": "8.10.14234.375", "DownloadID": 17},
             {"ProductCode": "059X1N1", "PackageTitle": "RM-1034 VAR APAC AU OPTUS"},
             {"ProductCode": "059X201", "PackageTitle": "RM-1034 VAR IMEA ZA CV"},
             {"ProductCode": "059X2T5", "PackageTitle": "RM-1034 VAR EURO IE POSTFONE SL"},
@@ -695,7 +695,7 @@
             {"ProductCode": "059X406", "PackageTitle": "RM-1062 VAR EURO GB VF SL"},
             {"ProductCode": "059X433", "PackageTitle": "RM-1062 VAR EURO RO VF SL"},
             {"ProductCode": "059X4R1", "PackageTitle": "RM-1062 VAR EURO DE CV"},
-            {"ProductCode": "059X6M4", "PackageTitle": "RM-1062 VAR EURO 7L CV"},
+            {"ProductCode": "059X6M4", "PackageTitle": "RM-1062 VAR EURO 7L CV", "Firmware": "02177.00000.15221.30001", "OS": "8.10.15148.160", "DownloadID": 47},
             {"ProductCode": "059X8S4", "PackageTitle": "RM-1062 VAR EURO IT TIM"}
         ]
     },
@@ -721,7 +721,7 @@
             {"ProductCode": "059X1F8", "PackageTitle": "RM-1064 VAR IMEA 6K CV"},
             {"ProductCode": "059X1M3", "PackageTitle": "RM-1064 VAR IMEA 3T CV"},
             {"ProductCode": "059X1R5", "PackageTitle": "RM-1064 VAR APAC AU CV"},
-            {"ProductCode": "059X1S0", "PackageTitle": "RM-1064 VAR APAC AU VF"},
+            {"ProductCode": "059X1S0", "PackageTitle": "RM-1064 VAR APAC AU VF", "Firmware": "02177.00000.15184.36004", "OS": "8.10.15148.160", "DownloadID": 48},
             {"ProductCode": "059X1Z1", "PackageTitle": "RM-1064 VAR LTA 3G CLARO SL"},
             {"ProductCode": "059X247", "PackageTitle": "RM-1064 VAR LTA 3G CLARO"},
             {"ProductCode": "059X251", "PackageTitle": "RM-1064 VAR LTA 6F MOVISTAR SL"},
@@ -797,7 +797,7 @@
             {"ProductCode": "059X163", "PackageTitle": "RM-1067 VAR IMEA 7P CV"},
             {"ProductCode": "059X168", "PackageTitle": "RM-1067 VAR IMEA IR CV"},
             {"ProductCode": "059X169", "PackageTitle": "RM-1067 VAR IMEA 9L CV"},
-            {"ProductCode": "059X1C4", "PackageTitle": "RM-1067 VAR EURO 6A CV"},
+            {"ProductCode": "059X1C4", "PackageTitle": "RM-1067 VAR EURO 6A CV", "Firmware": "02177.00000.15184.36002", "OS": "8.10.15148.160", "DownloadID": 49},
             {"ProductCode": "059X1D4", "PackageTitle": "RM-1067 VAR IMEA 4K CV"},
             {"ProductCode": "059X1D7", "PackageTitle": "RM-1067 VAR IMEA 6K CV"},
             {"ProductCode": "059X1G0", "PackageTitle": "RM-1067 VAR APAC 1A CV"},
@@ -827,12 +827,12 @@
             {"ProductCode": "059W9R4", "PackageTitle": "RM-1068 VAR LTA BR CLARO"},
             {"ProductCode": "059X0N9", "PackageTitle": "RM-1068 VAR APAC PH CV"},
             {"ProductCode": "059X0Q7", "PackageTitle": "RM-1068 VAR LTA 7R CV"},
-            {"ProductCode": "059X0V7", "PackageTitle": "RM-1068 VAR APAC AU CV"}
+            {"ProductCode": "059X0V7", "PackageTitle": "RM-1068 VAR APAC AU CV", "Firmware": "02074.00000.15234.28005", "OS": "8.10.14234.375", "DownloadID": 18}
         ]
     },
     {
         "ProductType": "RM-1069",
-        "ModelName": "Lumia 435 DS",
+        "ModelName": "Lumia 435 Dual SIM",
         "ProductCodes": [
             {"ProductCode": "059W477", "PackageTitle": "PWBASSY RM-1069 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059W8Q8", "PackageTitle": "RM-1069 VAR APAC VN CV"},
@@ -848,7 +848,7 @@
             {"ProductCode": "059W9H0", "PackageTitle": "RM-1069 EURO RO TELEKOM"},
             {"ProductCode": "059W9K2", "PackageTitle": "RM-1069 VAR IMEA 6K CV"},
             {"ProductCode": "059W9L6", "PackageTitle": "RM-1069 VAR IMEA 1E ORANGE"},
-            {"ProductCode": "059W9P8", "PackageTitle": "RM-1069 VAR EURO 6A CV"},
+            {"ProductCode": "059W9P8", "PackageTitle": "RM-1069 VAR EURO 6A CV", "Firmware": "02074.00000.15234.28004", "OS": "8.10.14234.375", "DownloadID": 19},
             {"ProductCode": "059W9Q6", "PackageTitle": "RM-1069 VAR IMEA 3T CV"},
             {"ProductCode": "059X006", "PackageTitle": "RM-1069 VAR IMEA 9L CV"},
             {"ProductCode": "059X0F6", "PackageTitle": "RM-1069 VAR EURO 7L CV"},
@@ -882,7 +882,7 @@
             {"ProductCode": "059X127", "PackageTitle": "RM-1070 VAR LTA CO CLARO"},
             {"ProductCode": "059X128", "PackageTitle": "RM-1070 VAR LTA DO ORANGE SL"},
             {"ProductCode": "059X136", "PackageTitle": "RM-1070 VAR LTA JM DIGICEL SL"},
-            {"ProductCode": "059X1D0", "PackageTitle": "RM-1070 VAR APAC NZ VF SL"},
+            {"ProductCode": "059X1D0", "PackageTitle": "RM-1070 VAR APAC NZ VF SL", "Firmware": "02074.00000.15234.28006", "OS": "8.10.14234.375", "DownloadID": 20},
             {"ProductCode": "059X1G1", "PackageTitle": "RM-1070 VAR NAM CA TELUS SL"},
             {"ProductCode": "059X212", "PackageTitle": "RM-1070 VAR APAC PG DIGICEL SL"}
         ]
@@ -918,7 +918,7 @@
             {"ProductCode": "059X0N2", "PackageTitle": "RM-1071 VAR IMEA 9L CV"},
             {"ProductCode": "059X0N4", "PackageTitle": "RM-1071 VAR IMEA ZA MTN"},
             {"ProductCode": "059X0P6", "PackageTitle": "RM-1071 VAR EURO GB O2 SL"},
-            {"ProductCode": "059X0Q6", "PackageTitle": "RM-1071 VAR EURO 7F CV"},
+            {"ProductCode": "059X0Q6", "PackageTitle": "RM-1071 VAR EURO 7F CV", "Firmware": "02074.00000.15234.28003", "OS": "8.10.14234.375", "DownloadID": 21},
             {"ProductCode": "059X0T3", "PackageTitle": "RM-1071 VAR EURO PL ORANGE"},
             {"ProductCode": "059X0T4", "PackageTitle": "RM-1071 VAR EURO IT VF"},
             {"ProductCode": "059X0X5", "PackageTitle": "RM-1071 VAR EURO PT VF SL"},
@@ -979,7 +979,7 @@
             {"ProductCode": "059X1V4", "PackageTitle": "RM-1072 VAR EURO DE O2"},
             {"ProductCode": "059X1V5", "PackageTitle": "RM-1072 VAR EURO GR VF"},
             {"ProductCode": "059X1V9", "PackageTitle": "RM-1072 VAR EURO IT VF"},
-            {"ProductCode": "059X1W6", "PackageTitle": "RM-1072 VAR EURO 6A CV"},
+            {"ProductCode": "059X1W6", "PackageTitle": "RM-1072 VAR EURO 6A CV", "Firmware": "02177.00000.15184.36002", "OS": "8.10.15148.160", "DownloadID": 50},
             {"ProductCode": "059X1W9", "PackageTitle": "RM-1072 VAR EURO GB O2 SL"},
             {"ProductCode": "059X1X3", "PackageTitle": "RM-1072 VAR EURO RO VF SL"},
             {"ProductCode": "059X1X4", "PackageTitle": "RM-1072 VAR EURO GB TESCO MOBILE SL"},
@@ -1011,7 +1011,7 @@
             {"ProductCode": "059X0M9", "PackageTitle": "RM-1073 GLOBAL SWAP"},
             {"ProductCode": "059X0P7", "PackageTitle": "RM-1073 VAR NAM US T-MOBILE SL"},
             {"ProductCode": "059X0Q4", "PackageTitle": "RM-1073 VAR NAM US METROPCS SL"},
-            {"ProductCode": "059X153", "PackageTitle": "RM-1073 VAR LTA 7R CV"},
+            {"ProductCode": "059X153", "PackageTitle": "RM-1073 VAR LTA 7R CV", "Firmware": "02177.00000.15184.36003", "OS": "8.10.15148.160", "DownloadID": 51},
             {"ProductCode": "059X1N3", "PackageTitle": "RM-1073 VAR LTA MX TELCEL"},
             {"ProductCode": "059X1N4", "PackageTitle": "RM-1073 VAR LTA MX TELCEL SL"},
             {"ProductCode": "059X1X7", "PackageTitle": "RM-1073 VAR LTA 3G CLARO SL"},
@@ -1033,7 +1033,7 @@
         "ProductCodes": [
             {"ProductCode": "059X0W9", "PackageTitle": "PWBASSY RM-1074 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X0X0", "PackageTitle": "RM-1074 GLOBAL SWAP"},
-            {"ProductCode": "059X189", "PackageTitle": "RM-1074 VAR APAC AU CV"},
+            {"ProductCode": "059X189", "PackageTitle": "RM-1074 VAR APAC AU CV", "Firmware": "02177.00000.15184.36003", "OS": "8.10.15148.160", "DownloadID": 52},
             {"ProductCode": "059X190", "PackageTitle": "RM-1074 VAR APAC NZ VF"},
             {"ProductCode": "059X191", "PackageTitle": "RM-1074 VAR APAC NZ SPARK"},
             {"ProductCode": "059X192", "PackageTitle": "RM-1074 VAR APAC AU OPTUS SL"},
@@ -1066,7 +1066,7 @@
             {"ProductCode": "059X1N2", "PackageTitle": "RM-1075 VAR APAC 1A CV"},
             {"ProductCode": "059X1R6", "PackageTitle": "RM-1075 VAR IMEA LK CV"},
             {"ProductCode": "059X1S9", "PackageTitle": "RM-1075 VAR IMEA ZA CV"},
-            {"ProductCode": "059X1T7", "PackageTitle": "RM-1075 VAR EURO 6A CV"},
+            {"ProductCode": "059X1T7", "PackageTitle": "RM-1075 VAR EURO 6A CV", "Firmware": "02177.00000.15184.36002", "OS": "8.10.15148.160", "DownloadID": 53},
             {"ProductCode": "059X269", "PackageTitle": "RM-1075 VAR APAC PH GLOBE SL"},
             {"ProductCode": "059X2B8", "PackageTitle": "RM-1075 VAR LTA 7R CV"},
             {"ProductCode": "059X2S3", "PackageTitle": "RM-1075 VAR EURO 3V CV"},
@@ -1091,7 +1091,7 @@
             {"ProductCode": "059X165", "PackageTitle": "RM-1077 VAR IMEA IN CV"},
             {"ProductCode": "059X1K4", "PackageTitle": "RM-1077 VAR EURO PL CV"},
             {"ProductCode": "059X1N8", "PackageTitle": "RM-1077 VAR EURO 7F CV"},
-            {"ProductCode": "059X1P2", "PackageTitle": "RM-1077 VAR EURO 6A CV"},
+            {"ProductCode": "059X1P2", "PackageTitle": "RM-1077 VAR EURO 6A CV", "Firmware": "02177.00000.15184.36002", "OS": "8.10.15148.160", "DownloadID": 54},
             {"ProductCode": "059X1T4", "PackageTitle": "RM-1077 VAR APAC 1A CV"},
             {"ProductCode": "059X1X6", "PackageTitle": "RM-1077 VAR LTA 7R CV"},
             {"ProductCode": "059X305", "PackageTitle": "RM-1077 VAR EURO BA BH SL"},
@@ -1224,7 +1224,7 @@
             {"ProductCode": "059W877", "PackageTitle": "RM-1089 VAR EURO CH SWISSCOM SL"},
             {"ProductCode": "059W892", "PackageTitle": "RM-1089 VAR EURO IT WIND"},
             {"ProductCode": "059W8C3", "PackageTitle": "RM-1089 EURO PT NOS SL"},
-            {"ProductCode": "059W8H3", "PackageTitle": "RM-1089 VAR EURO GB CV"},
+            {"ProductCode": "059W8H3", "PackageTitle": "RM-1089 VAR EURO GB CV", "Firmware": "02074.00000.15234.28009", "OS": "8.10.14234.375", "DownloadID": 22},
             {"ProductCode": "059W8H4", "PackageTitle": "RM-1089 VAR EURO PL POLKOMTEL"},
             {"ProductCode": "059W8K4", "PackageTitle": "RM-1089 VAR EURO PL TMO"},
             {"ProductCode": "059W8M5", "PackageTitle": "RM-1089 VAR EURO GB TESCO MOBILE SL"},
@@ -1265,7 +1265,7 @@
             {"ProductCode": "059W2T4", "PackageTitle": "RM-1090 NDT CHAKRA ROW DSDS"},
             {"ProductCode": "059W615", "PackageTitle": "PWBASSY RM-1090 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059W617", "PackageTitle": "RM-1090 GLOBAL SWAP"},
-            {"ProductCode": "059W6D9", "PackageTitle": "RM-1090 VAR EURO 6A CV"},
+            {"ProductCode": "059W6D9", "PackageTitle": "RM-1090 VAR EURO 6A CV", "Firmware": "02074.00000.15234.28006", "OS": "8.10.14234.375", "DownloadID": 23},
             {"ProductCode": "059W6G3", "PackageTitle": "RM-1090 VAR APAC ID ERA"},
             {"ProductCode": "059W6G4", "PackageTitle": "RM-1090 VAR APAC ID PAR"},
             {"ProductCode": "059W6G5", "PackageTitle": "RM-1090 VAR APAC ID TRI"},
@@ -1314,7 +1314,7 @@
             {"ProductCode": "059W748", "PackageTitle": "RM-1091 VAR AMERICA AR CLARO SL SKD"},
             {"ProductCode": "059W766", "PackageTitle": "RM-1091 VAR AMERICA AR TELECOM SL SKD"},
             {"ProductCode": "059W767", "PackageTitle": "RM-1091 VAR AMERICA AR CV SKD"},
-            {"ProductCode": "059W7J6", "PackageTitle": "RM-1091 VAR LTA 7R CV"},
+            {"ProductCode": "059W7J6", "PackageTitle": "RM-1091 VAR LTA 7R CV", "Firmware": "02074.00000.15234.28004", "OS": "8.10.14234.375", "DownloadID": 55},
             {"ProductCode": "059W8B7", "PackageTitle": "RM-1091 VAR LTA MX TELCEL"},
             {"ProductCode": "059W8B8", "PackageTitle": "RM-1091 VAR LTA MX TELCEL SL"},
             {"ProductCode": "059W8M4", "PackageTitle": "RM-1091 VAR LTA 3C TIGO SL"},
@@ -1333,7 +1333,7 @@
             {"ProductCode": "059W2T6", "PackageTitle": "RM-1092 NDT CHAKRA QB DSDS"},
             {"ProductCode": "059W660", "PackageTitle": "PWBASSY RM-1092 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059W6M2", "PackageTitle": "RM-1092 GLOBAL SWAP"},
-            {"ProductCode": "059W6N1", "PackageTitle": "RM-1092 VAR APAC TH CV"},
+            {"ProductCode": "059W6N1", "PackageTitle": "RM-1092 VAR APAC TH CV", "Firmware": "02074.00000.15234.28008", "OS": "8.10.14234.375", "DownloadID": 24},
             {"ProductCode": "059W7F0", "PackageTitle": "RM-1092 VAR LTA BR CV"},
             {"ProductCode": "059W874", "PackageTitle": "RM-1092 VAR LTA 7R CV"},
             {"ProductCode": "059W9K8", "PackageTitle": "RM-1092 VAR APAC PH SUN SL"},
@@ -1366,7 +1366,7 @@
             {"ProductCode": "059X1D5", "PackageTitle": "RM-1099 VAR APAC TW CV"},
             {"ProductCode": "059X1D6", "PackageTitle": "RM-1099 VAR APAC 1A CV"},
             {"ProductCode": "059X1F5", "PackageTitle": "RM-1099 VAR APAC HK CV"},
-            {"ProductCode": "059X1F7", "PackageTitle": "RM1099 VAR EURO 6A CV"},
+            {"ProductCode": "059X1F7", "PackageTitle": "RM-1099 VAR EURO 6A CV", "Firmware": "02074.00000.15234.28002", "OS": "8.10.14234.375", "DownloadID": 25},
             {"ProductCode": "059X1K0", "PackageTitle": "RM-1099 VAR IMEA 4Y CV"},
             {"ProductCode": "059X1K7", "PackageTitle": "RM-1099 VAR IMEA 1P CV"},
             {"ProductCode": "059X1K8", "PackageTitle": "RM-1099 VAR IMEA IN CV"},
@@ -1463,7 +1463,7 @@
         "ModelName": "Lumia 640 LTE Dual SIM",
         "ProductCodes": [
             {"ProductCode": "059X0Z0", "PackageTitle": "PWBASSY RM-1113 DS LIGHT SWAP ENGINE GLO"},
-            {"ProductCode": "059X1B3", "PackageTitle": "RM-1113 VAR APAC HK CV"},
+            {"ProductCode": "059X1B3", "PackageTitle": "RM-1113 VAR APAC HK CV", "Firmware": "02177.00000.15313.35004", "OS": "8.10.15148.160", "DownloadID": 56},
             {"ProductCode": "059X1B5", "PackageTitle": "RM-1113 VAR APAC CN CV"}
         ]
     },
@@ -1471,14 +1471,14 @@
         "ProductType": "RM-1114",
         "ModelName": "Lumia 435 Dual SIM",
         "ProductCodes": [
-            {"ProductCode": "059X0P1", "PackageTitle": "RM-1114 VAR LTA BR CV"}
+            {"ProductCode": "059X0P1", "PackageTitle": "RM-1114 VAR LTA BR CV", "Firmware": "02074.00000.15234.28002", "OS": "8.10.14234.375", "DownloadID": 26}
         ]
     },
     {
         "ProductType": "RM-1115",
         "ModelName": "Lumia 532 Dual SIM",
         "ProductCodes": [
-            {"ProductCode": "059X0W1", "PackageTitle": "RM-1115 VAR LTA BR CV"}
+            {"ProductCode": "059X0W1", "PackageTitle": "RM-1115 VAR LTA BR CV", "Firmware": "02074.00000.15234.28004", "OS": "8.10.14234.375", "DownloadID": 27}
         ]
     },
     {
@@ -1587,7 +1587,7 @@
             {"ProductCode": "059X5R0", "PackageTitle": "RM-1127 VAR EURO RO ORANGE"},
             {"ProductCode": "059X5R1", "PackageTitle": "RM-1127 VAR EURO PL ORANGE"},
             {"ProductCode": "059X5R3", "PackageTitle": "RM-1127 VAR EURO FR ORANGE"},
-            {"ProductCode": "059X5R5", "PackageTitle": "RM-1127 VAR EURO 6A CV"},
+            {"ProductCode": "059X5R5", "PackageTitle": "RM-1127 VAR EURO 6A CV", "Firmware": "01078.00042.16352.50000", "OS": "10.0.10586.494", "DownloadID": 57},
             {"ProductCode": "059X5V9", "PackageTitle": "RM-1127 VAR IMEA A7 CV"},
             {"ProductCode": "059X5W1", "PackageTitle": "RM-1127 VAR EURO B2 TMO"},
             {"ProductCode": "059X5W5", "PackageTitle": "RM-1127 INDIA BIS SWAP"},
@@ -1624,7 +1624,7 @@
             {"ProductCode": "059X5B8", "PackageTitle": "RM-1128 VAR LATAM AR CV SKD"},
             {"ProductCode": "059X5D2", "PackageTitle": "RM-1128 VAR LATAM AR MOVISTAR SL SKD"},
             {"ProductCode": "059X5D3", "PackageTitle": "RM-1128 VAR LATAM AR TELECOM SL SKD"},
-            {"ProductCode": "059X5K7", "PackageTitle": "RM-1128 VAR LTA 7R CV"},
+            {"ProductCode": "059X5K7", "PackageTitle": "RM-1128 VAR LTA 7R CV", "Firmware": "01078.00042.16352.50000", "OS": "10.0.10586.494", "DownloadID": 58},
             {"ProductCode": "059X5Q3", "PackageTitle": "RM-1128 VAR LTA 6F MOVISTAR SL"},
             {"ProductCode": "059X662", "PackageTitle": "RM-1128 VAR LTA MX IUSACELL SL"},
             {"ProductCode": "059X692", "PackageTitle": "RM-1128 VAR NAM 4R CV"},
@@ -1894,7 +1894,7 @@
             {"ProductCode": "059X0S8", "PackageTitle": "PWBASSY RM-1140 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X1V3", "PackageTitle": "PWBASSY RM-1140 LIGHT SWAP ENGINE PH"},
             {"ProductCode": "059X292", "PackageTitle": "RM-1140 VAR APAC AU CV"},
-            {"ProductCode": "059X2C0", "PackageTitle": "RM-1140 VAR APAC TH CV"},
+            {"ProductCode": "059X2C0", "PackageTitle": "RM-1140 VAR APAC TH CV", "Firmware": "02074.10000.15174.44003", "OS": null, "DownloadID": 59},
             {"ProductCode": "059X2H9", "PackageTitle": "RM-1140 VAR APAC PH CV"},
             {"ProductCode": "059X7F2", "PackageTitle": "RM-1140 VAR EURO TR CV"}
         ]
@@ -1919,7 +1919,7 @@
             {"ProductCode": "059X2B7", "PackageTitle": "RM-1141 VAR IMEA 3T CV"},
             {"ProductCode": "059X2G5", "PackageTitle": "RM-1141 VAR EURO IT CV"},
             {"ProductCode": "059X2H5", "PackageTitle": "RM-1141 VAR APAC 1A CV"},
-            {"ProductCode": "059X306", "PackageTitle": "RM-1141 VAR EURO 6A CV"},
+            {"ProductCode": "059X306", "PackageTitle": "RM-1141 VAR EURO 6A CV", "Firmware": "02074.10000.15174.44001", "OS": "8.10.15137.148", "DownloadID": 60},
             {"ProductCode": "059X3H0", "PackageTitle": "RM-1141 INDIA BIS SWAP"},
             {"ProductCode": "059X3T2", "PackageTitle": "RM-1141 VAR EURO PL CV"},
             {"ProductCode": "059X452", "PackageTitle": "RM-1141 VAR IMEA 9Z CV"},
@@ -4512,7 +4512,7 @@
             {"ProductCode": "059P470", "PackageTitle": "Nokia 610 RM-835 Country Variant Russia RU MAGENTA V2_COLOR"},
             {"ProductCode": "059P471", "PackageTitle": "RM-835 VAR EU IT CV BLACK"},
             {"ProductCode": "059P472", "PackageTitle": "Nokia 610 RM-835 Country Variant Italy IT White_v2_COLOR"},
-            {"ProductCode": "059P477", "PackageTitle": "Nokia 610 RM-835 Country Variant Russia RU WHITE V2_COLOR"},
+            {"ProductCode": "059P477", "PackageTitle": "Nokia 610 RM-835 Country Variant Russia RU WHITE V2_COLOR", "Firmware": "1066.0000.8858.12470", "OS": null, "DownloadID": 38},
             {"ProductCode": "059P482", "PackageTitle": "Nokia 610 RM-835 Smart Communications - Philippines PH BLACK v4"},
             {"ProductCode": "059P4B1", "PackageTitle": "Nokia 610 RM-835 SFR France FR NOKIA 610 Black V1"},
             {"ProductCode": "059P4B3", "PackageTitle": "Nokia 610 RM-835 TIM IT IT Black_v2"},
@@ -4859,7 +4859,7 @@
         "ProductCodes": [
             {"ProductCode": "059N197", "PackageTitle": "NDT CHINA CYAN"},
             {"ProductCode": "059N288", "PackageTitle": "NDT CHINA BLACK"},
-            {"ProductCode": "059N289", "PackageTitle": "NDT CHINA WHITE"},
+            {"ProductCode": "059N289", "PackageTitle": "NDT CHINA WHITE", "Firmware": "1066.0000.8773.12222", "OS": null, "DownloadID": 36},
             {"ProductCode": "059P1S3", "PackageTitle": "NDT CHINA MAGENTA"}
         ]
     },
@@ -4970,7 +4970,7 @@
             {"ProductCode": "059S2M2", "PackageTitle": "RM-846 VAR LTA1 PR CLARO SL"},
             {"ProductCode": "059S2Q8", "PackageTitle": "RM-846 VAR EU-NO NO TELENOR"},
             {"ProductCode": "059S2R1", "PackageTitle": "RM-846 VAR EU DK TELENOR"},
-            {"ProductCode": "059S2V2", "PackageTitle": "RM-846 VAR EU SE NO AV"},
+            {"ProductCode": "059S2V2", "PackageTitle": "RM-846 VAR EU SE NO AV", "Firmware": "3046.0000.1329.2007", "OS": null, "DownloadID": 39},
             {"ProductCode": "059S2V3", "PackageTitle": "RM-846 VAR ARGENTINA AR CLARO SKD SL"},
             {"ProductCode": "059S2V4", "PackageTitle": "RM-846 VAR ARGENTINA AR MOVISTAR SKD SL"},
             {"ProductCode": "059S2W7", "PackageTitle": "RM-846 VAR AMERICA AR TELECOM SKD SL"},
@@ -5011,7 +5011,7 @@
         "ProductType": "RM-849",
         "ModelName": "Lumia 610",
         "ProductCodes": [
-            {"ProductCode": "059P5C8", "PackageTitle": "NDT EU EURO1 MAGENTA"},
+            {"ProductCode": "059P5C8", "PackageTitle": "NDT EU EURO1 MAGENTA", "Firmware": "1102.0000.8779.12221", "OS": null, "DownloadID": 37},
             {"ProductCode": "059P6C3", "PackageTitle": "RM-849 VAR EU FR ORANGE SL BLACK"},
             {"ProductCode": "059P6C5", "PackageTitle": "RM-849 VAR EU ES ORANGE SL BLACK"},
             {"ProductCode": "059P6C6", "PackageTitle": "RM-849 VAR EU PL PTK SL BLACK"},
@@ -5732,7 +5732,7 @@
             {"ProductCode": "059R2P2", "PackageTitle": "RM-889 VAR UA CV YELLOW"},
             {"ProductCode": "059R2P3", "PackageTitle": "RM-889 VAR UA CV RED"},
             {"ProductCode": "059R2P4", "PackageTitle": "RM-889 VAR UA CV WHITE"},
-            {"ProductCode": "059R2P6", "PackageTitle": "RM-889_KZ_CV_BLACK_V2_VAR261319"},
+            {"ProductCode": "059R2P6", "PackageTitle": "RM-889_KZ_CV_BLACK_V2_VAR261319", "Firmware": null, "OS": null, "DownloadID": 29},
             {"ProductCode": "059R2P8", "PackageTitle": "RM-889 VAR KZ CV WHITE"},
             {"ProductCode": "059R2P9", "PackageTitle": "RM-889_KZ_CV_RED_V2_VAR261327"},
             {"ProductCode": "059R2Q0", "PackageTitle": "RM-889_KZ_CV_YELLOW_V2_VAR261331"},
@@ -6090,7 +6090,7 @@
             {"ProductCode": "059S2M4", "PackageTitle": "RM-898 VAR LTA PR CV YELLOW"},
             {"ProductCode": "059S2M8", "PackageTitle": "RM-898 VAR LTA PR CV CYAN"},
             {"ProductCode": "059S2R4", "PackageTitle": "RM-898 VAR LTA CR CV WHITE"},
-            {"ProductCode": "059S2R5", "PackageTitle": "RM-898 VAR LTA CR CV YELLOW"},
+            {"ProductCode": "059S2R5", "PackageTitle": "RM-898 VAR LTA CR CV YELLOW", "Firmware": null, "OS": null, "DownloadID": 30},
             {"ProductCode": "059S2R6", "PackageTitle": "RM-898 VAR LTA CR CV RED"},
             {"ProductCode": "059S2R7", "PackageTitle": "RM-898 VAR LTA CR CV CYAN"},
             {"ProductCode": "059S2V5", "PackageTitle": "RM-898 VAR LTA CLARO CA SL BLACK"}
@@ -6139,7 +6139,7 @@
         "ProductType": "RM-913",
         "ModelName": "Lumia 520",
         "ProductCodes": [
-            {"ProductCode": "059S0P9", "PackageTitle": "PWBASSY RM-913 LIGHT SWAP ENG CN"},
+            {"ProductCode": "059S0P9", "PackageTitle": "PWBASSY RM-913 LIGHT SWAP ENG CN", "Firmware": "1393.0000.1316.1001", "OS": null, "DownloadID": 28},
             {"ProductCode": "059S320", "PackageTitle": "RM-913 VAR CN CHINAMOBILE"}
         ]
     },
@@ -6156,7 +6156,7 @@
             {"ProductCode": "059S0P7", "PackageTitle": "RM-914 VAR CN PRC CHINA UNICOM"},
             {"ProductCode": "059S102", "PackageTitle": "RM-914 VAR FR ORANGE SL"},
             {"ProductCode": "059S107", "PackageTitle": "RM-914 VAR DE VODAFONE D2"},
-            {"ProductCode": "059S152", "PackageTitle": "RM-914 VAR EURASIA RU CV"},
+            {"ProductCode": "059S152", "PackageTitle": "RM-914 VAR EURASIA RU CV", "Firmware": "3058.50000.1425.0005", "OS": "8.10.12393.890", "DownloadID": 31},
             {"ProductCode": "059S184", "PackageTitle": "RM-914 VAR APAC HK CV"},
             {"ProductCode": "059S1L1", "PackageTitle": "RM-914 VAR EU FI CV"},
             {"ProductCode": "059S1L2", "PackageTitle": "RM-914 VAR IMEA-MEA3 JO LB PS CV"},
@@ -6347,7 +6347,7 @@
         "ProductCodes": [
             {"ProductCode": "059S000", "PackageTitle": "PWBASSY RM-917 LIGHT SWAP ENG GLOBA"},
             {"ProductCode": "059S0B4", "PackageTitle": "RM-917 VAR US T-MOBILE SL"},
-            {"ProductCode": "059T039", "PackageTitle": "RM-917 VAR NAM US METROPCS WIRELESS"}
+            {"ProductCode": "059T039", "PackageTitle": "RM-917 VAR NAM US METROPCS WIRELESS", "Firmware": "3058.50000.1439.0043", "OS": "8.10.12400.899", "DownloadID": 32}
         ]
     },
     {
@@ -6364,7 +6364,7 @@
             {"ProductCode": "059R4M5", "PackageTitle": "RM-923 VAR LTA PE CLARO SL MAGENTA"},
             {"ProductCode": "059R4M6", "PackageTitle": "RM-923 VAR LTA CO CLARO BLACK"},
             {"ProductCode": "059R4M9", "PackageTitle": "RM-923 VAR LTA CO CLARO MAGENTA"},
-            {"ProductCode": "059V7R3", "PackageTitle": "RM-923 VAR LTA MX CV BLACK"}
+            {"ProductCode": "059V7R3", "PackageTitle": "RM-923 VAR LTA MX CV BLACK", "Firmware": null, "OS": null, "DownloadID": 33}
         ]
     },
     {
@@ -6648,7 +6648,7 @@
             {"ProductCode": "059T755", "PackageTitle": "RM-941 VAR EURO DE O2"},
             {"ProductCode": "059T774", "PackageTitle": "RM-941 VAR EU AT MOBILKOM SL"},
             {"ProductCode": "059T781", "PackageTitle": "RM-941 VAR MEA ZA VODACOM"},
-            {"ProductCode": "059T785", "PackageTitle": "RM-941 VAR 6A AZ BY KZ RU UA MV"},
+            {"ProductCode": "059T785", "PackageTitle": "RM-941 VAR 6A AZ BY KZ RU UA MV", "Firmware": "3058.50000.1424.0004", "OS": "8.10.12393.890", "DownloadID": 40},
             {"ProductCode": "059T7C3", "PackageTitle": "RM-941 VAR EURO FR BOUYGUES TELECOM"},
             {"ProductCode": "059T7L0", "PackageTitle": "RM-941 VAR APAC NP CV"},
             {"ProductCode": "059T7L4", "PackageTitle": "RM-941 VAR APAC PH CV"},
@@ -6889,7 +6889,7 @@
             {"ProductCode": "059W0T7", "PackageTitle": "RM-975 VAR NAM US T-MOBILE SL CYAN"},
             {"ProductCode": "059W1V0", "PackageTitle": "RM-975 VAR NAM CA TELUS SL"},
             {"ProductCode": "059W1Z3", "PackageTitle": "RM-975 VAR NAM CA ROGERS SL"},
-            {"ProductCode": "059W1Z6", "PackageTitle": "RM-975 VAR LTA 7R CV"},
+            {"ProductCode": "059W1Z6", "PackageTitle": "RM-975 VAR LTA 7R CV", "Firmware": "02040.00021.15235.50003", "OS": "8.10.14234.375", "DownloadID": 41},
             {"ProductCode": "059W253", "PackageTitle": "RM-975 VAR LTA BR VIVO"},
             {"ProductCode": "059W2B5", "PackageTitle": "RM-975 VAR LTA BR CLARO"},
             {"ProductCode": "059W303", "PackageTitle": "RM-975 VAR LTA BR TIM"},
@@ -6943,7 +6943,7 @@
             {"ProductCode": "059V9L5", "PackageTitle": "RM-976 VAR EURO 3V CV"},
             {"ProductCode": "059V9N6", "PackageTitle": "RM-976 VAR EURO GR COSMOTE"},
             {"ProductCode": "059V9P8", "PackageTitle": "RM-976 VAR EURO DE VF"},
-            {"ProductCode": "059V9P9", "PackageTitle": "RM-976 VAR EURO 6A CV"},
+            {"ProductCode": "059V9P9", "PackageTitle": "RM-976 VAR EURO 6A CV", "Firmware": "02040.00021.15235.50004", "OS": "8.10.14234.375", "DownloadID": 42},
             {"ProductCode": "059V9Q0", "PackageTitle": "RM-976 VAR EURO IT WIND"},
             {"ProductCode": "059V9Q1", "PackageTitle": "RM-976 VAR EURO CH SWISSCOM SL"},
             {"ProductCode": "059V9Q3", "PackageTitle": "RM-976 VAR EURO NL CV"},
@@ -6993,7 +6993,7 @@
             {"ProductCode": "059V8T9", "PackageTitle": "RM-977 VAR LATAM AR CV SKD"},
             {"ProductCode": "059V936", "PackageTitle": "RM-977 VAR LTA 7R CV"},
             {"ProductCode": "059V969", "PackageTitle": "RM-977 VAR LTA MX TELCEL"},
-            {"ProductCode": "059V9C0", "PackageTitle": "RM-977 VAR APAC AU CV"},
+            {"ProductCode": "059V9C0", "PackageTitle": "RM-977 VAR APAC AU CV", "Firmware": "02040.00021.15235.50010", "OS": "8.10.14234.375", "DownloadID": 43},
             {"ProductCode": "059V9C2", "PackageTitle": "RM-977 VAR LATAM AR CLARO SL SKD"},
             {"ProductCode": "059V9C9", "PackageTitle": "RM-977 VAR APAC TH CV"},
             {"ProductCode": "059V9D3", "PackageTitle": "RM-977 VAR MVP LATAM 3G CLARO SL"},
@@ -7035,7 +7035,7 @@
             {"ProductCode": "059V9P5", "PackageTitle": "RM-978 VAR IMEA 7P CV"},
             {"ProductCode": "059V9P6", "PackageTitle": "RM-978 VAR EURO FR CV"},
             {"ProductCode": "059V9P7", "PackageTitle": "PWBASSY RM-978 LIGHT SWAP ENGINE PH"},
-            {"ProductCode": "059V9Q2", "PackageTitle": "RM-978 VAR EURO 6A CV"},
+            {"ProductCode": "059V9Q2", "PackageTitle": "RM-978 VAR EURO 6A CV", "Firmware": "02040.00021.15235.50004", "OS": "8.10.14234.375", "DownloadID": 44},
             {"ProductCode": "059V9T0", "PackageTitle": "RM-978 VAR APAC MY CV"},
             {"ProductCode": "059V9X7", "PackageTitle": "RM-978 VAR EURO 3F CV"},
             {"ProductCode": "059W015", "PackageTitle": "RM-978 VAR IMEA 9Z CV"},
@@ -7058,7 +7058,7 @@
         "ProductType": "RM-979",
         "ModelName": "Lumia 630 Dual SIM",
         "ProductCodes": [
-            {"ProductCode": "059V964", "PackageTitle": "RM-979 VAR LTA BR NDB"}
+            {"ProductCode": "059V964", "PackageTitle": "RM-979 VAR LTA BR NDB", "Firmware": "02040.00021.15235.50004", "OS": "8.10.14234.375", "DownloadID": 45}
         ]
     },
     {
@@ -7345,7 +7345,7 @@
         "ModelName": "Lumia 526",
         "ProductCodes": [
             {"ProductCode": "059V2V5", "PackageTitle": "PWBASSY RM-997 LIGHT SWAP ENGINE CN"},
-            {"ProductCode": "059V444", "PackageTitle": "RM-997 VAR APAC CN CMCC"}
+            {"ProductCode": "059V444", "PackageTitle": "RM-997 VAR APAC CN CMCC", "Firmware": "3058.50000.1424.0005", "OS": "8.10.12393.890", "DownloadID": 34}
         ]
     },
     {
@@ -7361,7 +7361,7 @@
             {"ProductCode": "059V535", "PackageTitle": "RM-998 VAR APAC MY CV"},
             {"ProductCode": "059V536", "PackageTitle": "RM-998 VAR APAC SG CV"},
             {"ProductCode": "059V568", "PackageTitle": "RM-998 VAR IMEA 4E CV"},
-            {"ProductCode": "059V570", "PackageTitle": "RM-998 VAR EURO 6A CV"},
+            {"ProductCode": "059V570", "PackageTitle": "RM-998 VAR EURO 6A CV", "Firmware": "3058.50000.1425.0003", "OS": "8.10.12393.890", "DownloadID": 35},
             {"ProductCode": "059V579", "PackageTitle": "RM-998 VAR EURO RU MTS"},
             {"ProductCode": "059V5J7", "PackageTitle": "RM-998 VAR APAC HK CV"},
             {"ProductCode": "059V6D8", "PackageTitle": "RM-998 VAR IMEA 4Y CV"},

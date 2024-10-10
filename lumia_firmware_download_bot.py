@@ -93,8 +93,9 @@ def check_user_limit(user_info):
     user_requests = next((user for user in users if user['UserID'] == user_info.id), None)
 
     if user_requests is None:
-        user_requests = {'UserID': user_info.id, "Fullname": user_info.full_name, "Username": f"@{user_info.username}",
-                         "Bot": user_info.is_bot, 'TotalRequests': 0,
+        user_requests = {'UserID': user_info.id, "Fullname": user_info.full_name,
+                         'Username': f"{'@' + user_info.username if user_info.username else ''}",
+                         'Bot': user_info.is_bot, 'TotalRequests': 0,
                          'LastRequested': current_time.strftime("%Y-%m-%d %H:%M:%S")}
         users.append(user_requests)
     elif current_time > datetime.strptime(user_requests['LastRequested'], "%Y-%m-%d %H:%M:%S") + timedelta(days=1):
@@ -125,8 +126,6 @@ def save_user_data(user_info):
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    print(message.from_user.full_name)
-
     if is_user_blocked(message):
         return
 
@@ -135,8 +134,8 @@ def send_welcome(message):
 
     if user_requests is None:
         user_requests = {'UserID': message.from_user.id, "Fullname": message.from_user.full_name,
-                         "Username": f"@{message.from_user.username}",
-                         "Bot": message.from_user.is_bot, 'TotalRequests': 0,
+                         'Username': f"{'@' + message.from_user.username if message.from_user.username else ''}",
+                         'Bot': message.from_user.is_bot, 'TotalRequests': 0,
                          'LastRequested': datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
         users.append(user_requests)
 
@@ -191,9 +190,10 @@ def upload_firmware(message):
         return
 
     user_states[message.from_user.id] = 'awaiting_upload_firmware'
-    bot.reply_to(message, "Please send or forward your firmware package in ZIP format. Otherwise, it will be rejected. "
-                          "You can also optionally include a caption about the firmware or any message for the "
-                          "moderator.\nUse /cancel to cancel the action.\n\n"
+    bot.reply_to(message, "Please send or forward your firmware package in ZIP format. "
+                          "Otherwise, it will be rejected. Additionally, "
+                          "specify the caption for the firmware product type, product code, or any relevant message.\n"
+                          "Use /cancel to cancel the action.\n\n"
                           "Note that sending or forwarding irrelevant files may result in you being blocked.",
                  reply_markup=ReplyKeyboardRemove())
 
@@ -240,7 +240,7 @@ def request_firmware(message):
     else:
         bot.send_message(REQUEST_CHANNEL, f"<b>User ID:</b> {message.from_user.id}\n"
                                           f"<b>Fullname:</b> {message.from_user.full_name}\n"
-                                          f"<b>Username:</b> @{message.from_user.username}\n"
+                                          f"<b>Username:</b> {'@' + message.from_user.username if message.from_user.username else ''}\n"
                                           f"<b>Product Type:</b> {product_type}\n"
                                           f"<b>Product Code:</b> {product_code}",
                          parse_mode='HTML')
@@ -263,7 +263,7 @@ def request_unblock(message):
 
     bot.send_message(UNBLOCK_CHANNEL, f"<b>User ID:</b> {message.from_user.id}\n"
                                       f"<b>Fullname:</b> {message.from_user.full_name}\n"
-                                      f"<b>Username:</b> @{message.from_user.username}\n"
+                                      f"<b>Username:</b> {'@' + message.from_user.username if message.from_user.username else ''}\n"
                                       f"<b>Reason:</b> {message.text.split(' ', 1)[1]}",
                      parse_mode='HTML')
 
@@ -297,7 +297,9 @@ def add_admin(message):
     if user_id not in admins and user_id not in super_admins():
         user = bot.get_chat(user_id)
 
-        admins.append({"UserID": user.id, "Fullname": f"{user.first_name} {user.last_name}", "Username": f"@{user.username}"})
+        admins.append({'UserID': user.id,
+                       'Fullname': f"{user.first_name}{' ' + user.last_name if user.last_name else ''}",
+                       'Username': f"{'@' + user.username if user.username else ''}"})
         dump_json('admins.json', admins)
 
         bot.reply_to(message, "The user has been promoted to admin privileges.")
@@ -338,6 +340,29 @@ def remove_admin(message):
         bot.reply_to(message, "The user is already not an admin.")
 
 
+@bot.message_handler(commands=['text_user'])
+def text_user(message):
+    if message.chat.id not in super_admins():
+        bot.reply_to(message, "Only super admin can use this request.")
+        return
+
+    params = message.text.split()
+
+    if len(params) < 3:
+        bot.reply_to(message, "<b>Usage:</b>\n\t/text_user &lt;UserID&gt &lt;Message&gt;\n\n"
+                              "<b>Example:</b>\n\t\t<code>/text_user 1234567890 "
+                              "Hi! Hope you find using the bot useful.</code>",
+                     parse_mode='HTML')
+        return
+
+    if not is_user_id_valid(params[1], message):
+        return
+
+    user_id = int(params[1])
+
+    bot.send_message(user_id, " ".join(message.text.split()[2:]))
+
+
 @bot.message_handler(commands=['notify_all'])
 def notify_users(message):
     if message.chat.id not in super_admins():
@@ -364,7 +389,8 @@ def list_admins(message):
     if admins:
         bot.reply_to(message, f"<b>Admin Users</b>\n{content}", parse_mode='HTML')
     else:
-        bot.reply_to(message, "<b>Admin Users</b>\nThere are currently no admins to display.", parse_mode='HTML')
+        bot.reply_to(message, "<b>Admin Users</b>\nThere are currently no admins to display.\n"
+                              "Super admins will not be listed here.", parse_mode='HTML')
 
 
 @bot.message_handler(commands=['get_id'])
@@ -396,8 +422,8 @@ def get_user_info(message):
     user_id = int(params[1])
 
     user = bot.get_chat(user_id)
-    bot.reply_to(message, f"<b>Fullname:</b> {user.first_name} {user.last_name}\n"
-                          f"<b>Username:</b> @{user.username}\n"
+    bot.reply_to(message, f"<b>Fullname:</b> {user.first_name}{' ' + user.last_name if user.last_name else ''}\n"
+                          f"<b>Username:</b> {'@' + user.username if user.username else ''}\n"
                           f"<b>Type:</b> {user.type}\n"
                           f"<b>Bio:</b> {user.bio}\n",
                  parse_mode='HTML')
@@ -433,8 +459,10 @@ def block_user(message):
             return
 
     user = bot.get_chat(user_id)
-    blocked_users.append({"UserID": user.id, "Fullname": f"{user.first_name} {user.last_name}",
-                          "Username": f"@{user.username}", "Reason": " ".join(message.text.split()[2:])})
+    blocked_users.append({'UserID': user.id,
+                          'Fullname': f"{user.first_name}{' ' + user.last_name if user.last_name else ''}",
+                          'Username': f"{'@' + user.username if user.username else ''}",
+                          'Reason': " ".join(message.text.split()[2:])})
     dump_json('blocked.json', blocked_users)
 
     bot.reply_to(message, f"Successfully blocked the user ID `{params[1]}`", parse_mode='MarkdownV2')
@@ -487,7 +515,7 @@ def blocked_users_list(message):
     if blocked_users:
         bot.reply_to(message, f"<b>Blocked Users</b>\n{content}", parse_mode='HTML')
     else:
-        bot.reply_to(message, "<b>Blocked Users</b>\nThere are no blocked users in the list.", parse_mode='HTML')
+        bot.reply_to(message, "<b>Blocked Users</b>\nThere are no blocked users yet.", parse_mode='HTML')
 
 
 @bot.message_handler(commands=['administrators'])
@@ -496,6 +524,7 @@ def bot_administrators(message):
         bot.reply_to(message, "<b>Super Admin Commands</b>\n"
                               "/add_admin - Promote a user to admin privileges.\n"
                               "/remove_admin - Demote a user from admin privileges.\n"
+                              "/text_user - Send a message to a bot user.\n"
                               "/notify_all - Send a message to all the bot users.\n\n"
                               "<b>Admin Commands</b>\n"
                               "/list_admins - Display the list of admins.\n"
@@ -573,10 +602,11 @@ def handle_product_code(message):
         ][0]
 
         if download_id:
-            #bot.copy_message(message.chat.id, CHANNEL_ID, download_id, protect_content=True, reply_markup=ReplyKeyboardRemove())
-            msg = bot.send_message(message.chat.id, "Please wait...", reply_markup=ReplyKeyboardRemove())
+            bot.copy_message(message.chat.id, REPO_CHANNEL, download_id, reply_to_message_id=message.message_id,
+                             protect_content=True, reply_markup=ReplyKeyboardRemove())
+            """msg = bot.send_message(message.chat.id, "Please wait...", reply_markup=ReplyKeyboardRemove())
             bot.forward_message(message.chat.id, REPO_CHANNEL, download_id, protect_content=True)
-            bot.delete_message(message.chat.id, msg.message_id)
+            bot.delete_message(message.chat.id, msg.message_id)"""
 
             if not is_user_admin_by_id(message.from_user.id):
                 save_user_data(message.from_user)
@@ -599,11 +629,13 @@ def handle_upload_file(message):
     print(message.document.file_size)
     print(message.document.file_name)
     print(message.document.mime_type)"""
+
+    bot.forward_message(UPLOAD_CHANNEL, message.chat.id, message.message_id)
+
     if message.document.mime_type == "application/zip" and message.document.file_name.lower().endswith(".zip"):
         # Clear the user's state after handling the request
         del user_states[message.from_user.id]
 
-        bot.forward_message(UPLOAD_CHANNEL, message.chat.id, message.message_id)
         bot.reply_to(message, "Thank you for helping us extend the repository. "
                               "We will review this firmware package and add it to the repository soon.")
     else:
@@ -632,7 +664,7 @@ def handle_forward_message(message):
         elif content_type == 'document':
             bot.send_document(target_id, content.document.file_id, caption=content.caption)
 
-    msg = bot.send_message(message.chat.id, "Notifying users... please hold on.", reply_markup=ReplyKeyboardRemove())
+    msg = bot.send_message(message.chat.id, "Notifying users... please hold on.")
 
     # Notify all users and admins
     for target in users + admins:
@@ -656,10 +688,4 @@ def handle_user_id(message):
 
 
 # Start polling
-#bot.polling()
-while True:
-    try:
-        bot.polling()
-    except Exception as e:
-        print(e)
-        print("bot restarted.")
+bot.infinity_polling()
