@@ -2,6 +2,7 @@
     {
         "ProductType": "RM-1010",
         "ModelName": "Lumia 638",
+        "Emergency": {"DownloadID": 42},
         "ProductCodes": [
             {"ProductCode": "059V835", "PackageTitle": "PWBASSY RM-1010 LIGHT SWAP ENGINE CN", "Firmware": "01061.00062.14216.44001", "OS": "8.10.12393.890", "DownloadID": 3},
             {"ProductCode": "059W0P1", "PackageTitle": "RM-1010 VAR APAC CN CMCC", "Firmware": "02040.00019.14484.24004", "OS": null, "DownloadID": 4},
@@ -13,6 +14,7 @@
     {
         "ProductType": "RM-1017",
         "ModelName": "Lumia 530",
+        "Emergency": {"DownloadID": 43},
         "ProductCodes": [
             {"ProductCode": "059W0K2", "PackageTitle": "RM-1017 SS ROW NDT CE", "Firmware": "1068.00010.14213.00000", "OS": null, "DownloadID": 8},
             {"ProductCode": "059W240", "PackageTitle": "PWBASSY RM-1017 LIGHT SWAP ENGINE GLOBAL", "Firmware": "01068.00016.14263.31001", "OS": null, "DownloadID": 9},
@@ -89,6 +91,7 @@
     {
         "ProductType": "RM-1018",
         "ModelName": "Lumia 530",
+        "Emergency": {"DownloadID": 44},
         "ProductCodes": [
             {"ProductCode": "059W1B2", "PackageTitle": "RM-1018 VAR NAM US T-MOBILE SL"},
             {"ProductCode": "059W251", "PackageTitle": "PWBASSY RM-1018 LIGHT SWAP ENGINE GLOBAL"},
@@ -127,6 +130,7 @@
     {
         "ProductType": "RM-1019",
         "ModelName": "Lumia 530 Dual SIM",
+        "Emergency": {"DownloadID": 45},
         "ProductCodes": [
             {"ProductCode": "059W237", "PackageTitle": "PWBASSY RM-1019 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059W238", "PackageTitle": "RM-1019 GLOBAL SWAP"},
@@ -166,6 +170,7 @@
     {
         "ProductType": "RM-1020",
         "ModelName": "Lumia 530 Dual SIM",
+        "Emergency": {"DownloadID": 46},
         "ProductCodes": [
             {"ProductCode": "059W054", "PackageTitle": "RM-1020 DS BRAZIL CTR FOR RELEASE PREP"},
             {"ProductCode": "059W349", "PackageTitle": "RM-1020 VAR LTA BR CV", "Firmware": "02074.00000.15234.28005", "OS": "8.10.14234.375", "DownloadID": 14},
@@ -180,6 +185,7 @@
     {
         "ProductType": "RM-1027",
         "ModelName": "Lumia 636",
+        "Emergency": {"DownloadID": 47},
         "ProductCodes": [
             {"ProductCode": "059V3K6", "PackageTitle": "RM-1027 CTR R&D SECURED CSFB"},
             {"ProductCode": "059V837", "PackageTitle": "PWBASSY RM-1027 LIGHT SWAP ENGINE CN"},
@@ -193,6 +199,7 @@
     {
         "ProductType": "RM-1031",
         "ModelName": "Lumia 532 Dual SIM",
+        "Emergency": {"DownloadID": 48},
         "ProductCodes": [
             {"ProductCode": "059W8L3", "PackageTitle": "PWBASSY RM-1031 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059W8L4", "PackageTitle": "RM-1031 GLOBAL SWAP"},
@@ -226,6 +233,7 @@
     {
         "ProductType": "RM-1032",
         "ModelName": "Lumia 532",
+        "Emergency": {"DownloadID": 49},
         "ProductCodes": [
             {"ProductCode": "059W8L9", "PackageTitle": "PWBASSY RM-1032 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059W8M0", "PackageTitle": "RM-1032 LTA SWAP"},
@@ -242,6 +250,7 @@
     {
         "ProductType": "RM-1034",
         "ModelName": "Lumia 532",
+        "Emergency": {"DownloadID": 50},
         "ProductCodes": [
             {"ProductCode": "059W8L6", "PackageTitle": "PWBASSY RM-1034 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059W8L7", "PackageTitle": "RM-1034 GLOBAL SWAP"},
@@ -277,6 +286,7 @@
     {
         "ProductType": "RM-1038",
         "ModelName": "Lumia 735 4G",
+        "Emergency": {"DownloadID": 51},
         "ProductCodes": [
             {"ProductCode": "059W436", "PackageTitle": "RM-1038 GLOBAL LIGHT SWAP PACKAGE"},
             {"ProductCode": "059W437", "PackageTitle": "RM-1038 GLOBAL SWAP"},
@@ -293,7 +303,7 @@
             {"ProductCode": "059W5Q0", "PackageTitle": "RM-1038 VAR IMEA 3M CV"},
             {"ProductCode": "059W5Q1", "PackageTitle": "RM-1038 VAR EURO 7F CV"},
             {"ProductCode": "059W5Q5", "PackageTitle": "RM-1038 VAR EURO 7L CV"},
-            {"ProductCode": "059W5Q6", "PackageTitle": "RM-1038 VAR EURO 6A CV"},
+            {"ProductCode": "059W5Q6", "PackageTitle": "RM-1038 VAR EURO 6A CV", "Firmware": "02177.00000.15184.36002", "OS": "8.10.15148.160", "DownloadID": 72},
             {"ProductCode": "059W5R1", "PackageTitle": "RM-1038 VAR EURO NL CV"},
             {"ProductCode": "059W5R2", "PackageTitle": "RM-1038 VAR EURO BE CV"},
             {"ProductCode": "059W5S4", "PackageTitle": "RM-1038 VAR EURO TR CV"},
@@ -335,6 +345,7 @@
     {
         "ProductType": "RM-1039",
         "ModelName": "Lumia 735",
+        "Emergency": {"DownloadID": 52},
         "ProductCodes": [
             {"ProductCode": "059W441", "PackageTitle": "PWBASSY RM-1039 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059W442", "PackageTitle": "RM-1039 LTA SWAP"},
@@ -343,7 +354,7 @@
             {"ProductCode": "059W658", "PackageTitle": "RM-1039 VAR MVP LATAM 3G CLARO SL"},
             {"ProductCode": "059W693", "PackageTitle": "RM-1039 VAR LTA 3C TIGO SL"},
             {"ProductCode": "059W696", "PackageTitle": "RM-1039 VAR LTA 6F MOVISTAR SL"},
-            {"ProductCode": "059W6B6", "PackageTitle": "RM-1039 VAR LTA BR CV"},
+            {"ProductCode": "059W6B6", "PackageTitle": "RM-1039 VAR LTA BR CV", "Firmware": "02040.00021.15236.02003", "OS": "8.10.14234.375", "DownloadID": 73},
             {"ProductCode": "059W6F7", "PackageTitle": "RM-1039 VAR LTA CO CLARO"},
             {"ProductCode": "059W6M1", "PackageTitle": "RM-1039 VAR LTA PE CLARO SL"},
             {"ProductCode": "059W6M3", "PackageTitle": "RM-1039 VAR LTA JM DIGICEL SL"},
@@ -362,6 +373,7 @@
     {
         "ProductType": "RM-1040",
         "ModelName": "Lumia 730 Dual SIM",
+        "Emergency": {"DownloadID": 53},
         "ProductCodes": [
             {"ProductCode": "059W444", "PackageTitle": "PWBASSY RM-1040 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059W446", "PackageTitle": "RM-1040 GLOBAL SWAP"},
@@ -382,7 +394,7 @@
             {"ProductCode": "059W5V9", "PackageTitle": "RM-1040 VAR IMEA 3T CV"},
             {"ProductCode": "059W5W5", "PackageTitle": "RM-1040 VAR APAC 4X CV"},
             {"ProductCode": "059W630", "PackageTitle": "RM-1040 VAR IMEA 7P CV"},
-            {"ProductCode": "059W631", "PackageTitle": "RM-1040 VAR EURO 6A CV"},
+            {"ProductCode": "059W631", "PackageTitle": "RM-1040 VAR EURO 6A CV", "Firmware": "02040.00021.15235.30004", "OS": "8.10.14226.359", "DownloadID": 74},
             {"ProductCode": "059W680", "PackageTitle": "RM-1040 VAR IMEA 9L CV"},
             {"ProductCode": "059W6N0", "PackageTitle": "RM-1040 VAR LTA 7R CV"},
             {"ProductCode": "059W7K8", "PackageTitle": "RM-1040 VAR EURO 9T CV"},
@@ -392,13 +404,15 @@
     {
         "ProductType": "RM-1041",
         "ModelName": "Lumia 735",
+        "Emergency": {"DownloadID": 54},
         "ProductCodes": [
-            {"ProductCode": "059W946", "PackageTitle": "RM-1041 VAR NAM US VERIZON"}
+            {"ProductCode": "059W946", "PackageTitle": "RM-1041 VAR NAM US VERIZON", "Firmware": "02171.00002.15194.03084", "OS": "8.10.15148.160", "DownloadID": 75}
         ]
     },
     {
         "ProductType": "RM-1045",
         "ModelName": "Lumia 930",
+        "Emergency": {"DownloadID": 55},
         "ProductCodes": [
             {"ProductCode": "059V992", "PackageTitle": "PWBASSY RM-1045 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059V9B0", "PackageTitle": "RM-1045 GLOBAL BLACK SWAP"},
@@ -655,6 +669,7 @@
     {
         "ProductType": "RM-1049",
         "ModelName": "Lumia 830",
+        "Emergency": {"DownloadID": 56},
         "ProductCodes": [
             {"ProductCode": "059W0C4", "PackageTitle": "PWBASSY RM-1049 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059W5V2", "PackageTitle": "RM-1049 VAR APAC AU TELSTRA SLV"},
@@ -662,7 +677,7 @@
             {"ProductCode": "059W6G8", "PackageTitle": "RM-1049 VAR APAC TW CV D GREY"},
             {"ProductCode": "059W6K7", "PackageTitle": "RM-1049 VAR APAC AU CV D GREY"},
             {"ProductCode": "059W6K8", "PackageTitle": "RM-1049 VAR APAC AU CV SLV"},
-            {"ProductCode": "059W6L2", "PackageTitle": "RM-1049 VAR APAC NZ TELECOM D GREY"},
+            {"ProductCode": "059W6L2", "PackageTitle": "RM-1049 VAR APAC NZ TELECOM D GREY", "Firmware": "02040.00021.15235.53009", "OS": "8.10.14234.375", "DownloadID": 76},
             {"ProductCode": "059X203", "PackageTitle": "RM-1049 VAR APAC PG DIGICEL D GREY SL"},
             {"ProductCode": "059X424", "PackageTitle": "RM-1049 VAR APAC HK CV SLV"},
             {"ProductCode": "059X425", "PackageTitle": "RM-1049 VAR APAC HK CV D GREY"}
@@ -671,6 +686,7 @@
     {
         "ProductType": "RM-1062",
         "ModelName": "Lumia 640 XL LTE",
+        "Emergency": {"DownloadID": 57},
         "ProductCodes": [
             {"ProductCode": "059X0M0", "PackageTitle": "PWBASSY RM-1062 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X0M1", "PackageTitle": "RM-1062 GLOBAL SWAP"},
@@ -702,8 +718,9 @@
     {
         "ProductType": "RM-1063",
         "ModelName": "Lumia 640 XL LTE",
+        "Emergency": {"DownloadID": 58},
         "ProductCodes": [
-            {"ProductCode": "059X0B9", "PackageTitle": "RM-1063 VAR NAM US ATT SL BLACK"},
+            {"ProductCode": "059X0B9", "PackageTitle": "RM-1063 VAR NAM US ATT SL BLACK", "Firmware": "02179.00000.15204.27033", "OS": "8.10.15148.160", "DownloadID": 77},
             {"ProductCode": "059X0P3", "PackageTitle": "RM-1063 VAR NAM US ATT NYPD SL"},
             {"ProductCode": "059X370", "PackageTitle": "RM-1063 VAR NAM US ATT SL WHITE"},
             {"ProductCode": "059X371", "PackageTitle": "RM-1063 VAR NAM US ATT DEMO SL BLACK"},
@@ -713,6 +730,7 @@
     {
         "ProductType": "RM-1064",
         "ModelName": "Lumia 640 XL LTE",
+        "Emergency": {"DownloadID": 59},
         "ProductCodes": [
             {"ProductCode": "059W9J8", "PackageTitle": "PWBASSY RM-1064 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X0T9", "PackageTitle": "RM-1064 GLOBAL SWAP"},
@@ -744,6 +762,7 @@
     {
         "ProductType": "RM-1065",
         "ModelName": "Lumia 640 XL Dual SIM",
+        "Emergency": {"DownloadID": 60},
         "ProductCodes": [
             {"ProductCode": "059X0V3", "PackageTitle": "PWBASSY RM-1065 DS LIGHT SWAP ENGINE GLO"},
             {"ProductCode": "059X0W6", "PackageTitle": "RM-1065 DS GLOBAL SWAP"},
@@ -755,7 +774,7 @@
             {"ProductCode": "059X1V2", "PackageTitle": "RM-1065 VAR LTA BR VIVO"},
             {"ProductCode": "059X267", "PackageTitle": "RM-1065 VAR APAC PH SUN SL"},
             {"ProductCode": "059X270", "PackageTitle": "RM-1065 VAR APAC TW CV"},
-            {"ProductCode": "059X295", "PackageTitle": "RM-1065 VAR EURO 7L CV"},
+            {"ProductCode": "059X295", "PackageTitle": "RM-1065 VAR EURO 7L CV", "Firmware": "02177.00000.15184.36002", "OS": "8.10.15148.160", "DownloadID": 78},
             {"ProductCode": "059X2F4", "PackageTitle": "RM-1065 VAR LTA 7R CV"},
             {"ProductCode": "059X347", "PackageTitle": "RM-1065 VAR IMEA 9L CV"},
             {"ProductCode": "059X3D9", "PackageTitle": "RM-1065 INDIA BIS SWAP"},
@@ -768,11 +787,12 @@
     {
         "ProductType": "RM-1066",
         "ModelName": "Lumia 640 XL",
+        "Emergency": {"DownloadID": 61},
         "ProductCodes": [
             {"ProductCode": "059X0K8", "PackageTitle": "PWBASSY RM-1066 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X0K9", "PackageTitle": "RM-1066 GLOBAL SWAP"},
             {"ProductCode": "059X0Z8", "PackageTitle": "RM-1066 VAR EURO IT CV"},
-            {"ProductCode": "059X1N0", "PackageTitle": "RM-1066 VAR EURO 7F CV"},
+            {"ProductCode": "059X1N0", "PackageTitle": "RM-1066 VAR EURO 7F CV", "Firmware": "02177.00000.15184.36003", "OS": "8.10.15148.160", "DownloadID": 79},
             {"ProductCode": "059X1W0", "PackageTitle": "RM-1066 VAR IMEA 3T CV"},
             {"ProductCode": "059X1X0", "PackageTitle": "RM-1066 VAR LTA 7R CV"},
             {"ProductCode": "059X1X1", "PackageTitle": "RM-1066 VAR LTA 6F MOVISTAR SL"},
@@ -783,6 +803,7 @@
     {
         "ProductType": "RM-1067",
         "ModelName": "Lumia 640 XL Dual SIM",
+        "Emergency": {"DownloadID": 62},
         "ProductCodes": [
             {"ProductCode": "059X0L2", "PackageTitle": "RM-1067 GLOBAL SWAP"},
             {"ProductCode": "059X0L3", "PackageTitle": "RM-1067 VAR APAC ID ERA"},
@@ -819,6 +840,7 @@
     {
         "ProductType": "RM-1068",
         "ModelName": "Lumia 435",
+        "Emergency": {"DownloadID": 63},
         "ProductCodes": [
             {"ProductCode": "059W7L2", "PackageTitle": "RM-1068 LTA SWAP PACKAGE"},
             {"ProductCode": "059W8N7", "PackageTitle": "RM-1068 VAR APAC TH CV"},
@@ -833,6 +855,7 @@
     {
         "ProductType": "RM-1069",
         "ModelName": "Lumia 435 Dual SIM",
+        "Emergency": {"DownloadID": 64},
         "ProductCodes": [
             {"ProductCode": "059W477", "PackageTitle": "PWBASSY RM-1069 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059W8Q8", "PackageTitle": "RM-1069 VAR APAC VN CV"},
@@ -863,6 +886,7 @@
     {
         "ProductType": "RM-1070",
         "ModelName": "Lumia 435",
+        "Emergency": {"DownloadID": 65},
         "ProductCodes": [
             {"ProductCode": "059W9F7", "PackageTitle": "RM-1070 VAR LATAM 3G CLARO SL"},
             {"ProductCode": "059W9F9", "PackageTitle": "RM-1070 VAR LTA 6F MOVISTAR SL"},
@@ -890,6 +914,7 @@
     {
         "ProductType": "RM-1071",
         "ModelName": "Lumia 435",
+        "Emergency": {"DownloadID": 66},
         "ProductCodes": [
             {"ProductCode": "059W483", "PackageTitle": "PWBASSY RM-1071 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059W8V4", "PackageTitle": "RM-1071 VAR EURO ES MOVISTAR"},
@@ -939,6 +964,7 @@
     {
         "ProductType": "RM-1072",
         "ModelName": "Lumia 640 LTE",
+        "Emergency": {"DownloadID": 67},
         "ProductCodes": [
             {"ProductCode": "059W9C1", "PackageTitle": "PWBASSY RM-1072 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X0M6", "PackageTitle": "RM-1072 GLOBAL SWAP"},
@@ -1004,6 +1030,7 @@
     {
         "ProductType": "RM-1073",
         "ModelName": "Lumia 640 LTE",
+        "Emergency": {"DownloadID": 68},
         "ProductCodes": [
             {"ProductCode": "059X0B6", "PackageTitle": "RM-1073 VAR NAM US CRICKET SL"},
             {"ProductCode": "059X0B8", "PackageTitle": "RM-1073 VAR NAM US ATT SL"},
@@ -1030,6 +1057,7 @@
     {
         "ProductType": "RM-1074",
         "ModelName": "Lumia 640 LTE",
+        "Emergency": {"DownloadID": 69},
         "ProductCodes": [
             {"ProductCode": "059X0W9", "PackageTitle": "PWBASSY RM-1074 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X0X0", "PackageTitle": "RM-1074 GLOBAL SWAP"},
@@ -1058,6 +1086,7 @@
     {
         "ProductType": "RM-1075",
         "ModelName": "Lumia 640 Dual SIM",
+        "Emergency": {"DownloadID": 70},
         "ProductCodes": [
             {"ProductCode": "059X0X7", "PackageTitle": "PWBASSY RM-1075 DS LIGHT SWAP ENGINE GLO"},
             {"ProductCode": "059X0X8", "PackageTitle": "RM-1075 DS GLOBAL SWAP"},
@@ -1081,6 +1110,7 @@
     {
         "ProductType": "RM-1077",
         "ModelName": "Lumia 640 Dual SIM",
+        "Emergency": {"DownloadID": 71},
         "ProductCodes": [
             {"ProductCode": "059W9B6", "PackageTitle": "PWBASSY RM-1077 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X0N1", "PackageTitle": "RM-1077 GLOBAL SWAP"},
@@ -1103,14 +1133,16 @@
     {
         "ProductType": "RM-1078",
         "ModelName": "Lumia 735",
+        "Emergency": {"DownloadID": 72},
         "ProductCodes": [
             {"ProductCode": "059W4L7", "PackageTitle": "RM-1078 VAR US SPRINT"},
-            {"ProductCode": "059X1N9", "PackageTitle": "RM-1078 VAR NAM US SPRINT 1GB"}
+            {"ProductCode": "059X1N9", "PackageTitle": "RM-1078 VAR NAM US SPRINT 1GB", "Firmware": "02040.00019.15096.09001", "OS": "8.10.14226.359", "DownloadID": 80}
         ]
     },
     {
         "ProductType": "RM-1085",
         "ModelName": "Lumia 950 XL",
+        "Emergency": {"DownloadID": 73},
         "ProductCodes": [
             {"ProductCode": "059W8M3", "PackageTitle": "PWBASSY RM-1085 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X3S5", "PackageTitle": "RM-1085 GLOBAL BLACK SWAP"},
@@ -1188,6 +1220,7 @@
     {
         "ProductType": "RM-1087",
         "ModelName": "Lumia 930",
+        "Emergency": {"DownloadID": 74},
         "ProductCodes": [
             {"ProductCode": "059W503", "PackageTitle": "PWBASSY RM-1087 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059W5D5", "PackageTitle": "RM-1087 VAR APAC CN UNICOM BR_ORA"},
@@ -1200,6 +1233,7 @@
     {
         "ProductType": "RM-1089",
         "ModelName": "Lumia 535",
+        "Emergency": {"DownloadID": 75},
         "ProductCodes": [
             {"ProductCode": "059W2T3", "PackageTitle": "RM-1089 NDT CHAKRA ROW"},
             {"ProductCode": "059W611", "PackageTitle": "PWBASSY RM-1089 LIGHT SWAP ENGINE GLOBAL"},
@@ -1261,6 +1295,7 @@
     {
         "ProductType": "RM-1090",
         "ModelName": "Lumia 535 Dual SIM",
+        "Emergency": {"DownloadID": 76},
         "ProductCodes": [
             {"ProductCode": "059W2T4", "PackageTitle": "RM-1090 NDT CHAKRA ROW DSDS"},
             {"ProductCode": "059W615", "PackageTitle": "PWBASSY RM-1090 LIGHT SWAP ENGINE GLOBAL"},
@@ -1306,6 +1341,7 @@
     {
         "ProductType": "RM-1091",
         "ModelName": "Lumia 535",
+        "Emergency": {"DownloadID": 77},
         "ProductCodes": [
             {"ProductCode": "059W2T5", "PackageTitle": "RM-1091 NDT CHAKRA QB"},
             {"ProductCode": "059W620", "PackageTitle": "PWBASSY RM-1091 LIGHT SWAP ENGINE GLOBAL"},
@@ -1329,6 +1365,7 @@
     {
         "ProductType": "RM-1092",
         "ModelName": "Lumia 535 Dual SIM",
+        "Emergency": {"DownloadID": 78},
         "ProductCodes": [
             {"ProductCode": "059W2T6", "PackageTitle": "RM-1092 NDT CHAKRA QB DSDS"},
             {"ProductCode": "059W660", "PackageTitle": "PWBASSY RM-1092 LIGHT SWAP ENGINE GLOBAL"},
@@ -1346,15 +1383,17 @@
     {
         "ProductType": "RM-1096",
         "ModelName": "Lumia 640 XL LTE Dual SIM",
+        "Emergency": {"DownloadID": 79},
         "ProductCodes": [
             {"ProductCode": "059X132", "PackageTitle": "PWBASSY RM-1096 DS LIGHT SWAP ENGINE CU"},
-            {"ProductCode": "059X183", "PackageTitle": "RM-1096 VAR APAC HK CV"},
+            {"ProductCode": "059X183", "PackageTitle": "RM-1096 VAR APAC HK CV", "Firmware": "02177.00000.15313.35003", "OS": "8.10.15148.160", "DownloadID": 81},
             {"ProductCode": "059X1C9", "PackageTitle": "RM-1096 VAR APAC CN CV"}
         ]
     },
     {
         "ProductType": "RM-1099",
         "ModelName": "Lumia 430 Dual SIM",
+        "Emergency": {"DownloadID": 80},
         "ProductCodes": [
             {"ProductCode": "059X0X2", "PackageTitle": "PWBASSY RM-1099 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X0X3", "PackageTitle": "RM-1099 GLOBAL SWAP"},
@@ -1377,6 +1416,7 @@
     {
         "ProductType": "RM-1104",
         "ModelName": "Lumia 950",
+        "Emergency": {"DownloadID": 81},
         "ProductCodes": [
             {"ProductCode": "059X2C3", "PackageTitle": "PWBASSY RM-1104 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X409", "PackageTitle": "RM-1104 GLOBAL SWAP"},
@@ -1443,6 +1483,7 @@
     {
         "ProductType": "RM-1105",
         "ModelName": "Lumia 950",
+        "Emergency": {"DownloadID": 82},
         "ProductCodes": [
             {"ProductCode": "059X4D5", "PackageTitle": "RM-1105 VAR US ATT SL BLACK"},
             {"ProductCode": "059X4D9", "PackageTitle": "RM-1105 VAR US ATT SL WHITE"},
@@ -1453,6 +1494,7 @@
     {
         "ProductType": "RM-1109",
         "ModelName": "Lumia 640",
+        "Emergency": {"DownloadID": 83},
         "ProductCodes": [
             {"ProductCode": "059X150", "PackageTitle": "RM-1109 VAR LTA BR CV"},
             {"ProductCode": "059X207", "PackageTitle": "RM-1109 VAR LTA BR NDB"}
@@ -1461,6 +1503,7 @@
     {
         "ProductType": "RM-1113",
         "ModelName": "Lumia 640 LTE Dual SIM",
+        "Emergency": {"DownloadID": 84},
         "ProductCodes": [
             {"ProductCode": "059X0Z0", "PackageTitle": "PWBASSY RM-1113 DS LIGHT SWAP ENGINE GLO"},
             {"ProductCode": "059X1B3", "PackageTitle": "RM-1113 VAR APAC HK CV", "Firmware": "02177.00000.15313.35004", "OS": "8.10.15148.160", "DownloadID": 56},
@@ -1470,6 +1513,7 @@
     {
         "ProductType": "RM-1114",
         "ModelName": "Lumia 435 Dual SIM",
+        "Emergency": {"DownloadID": 85},
         "ProductCodes": [
             {"ProductCode": "059X0P1", "PackageTitle": "RM-1114 VAR LTA BR CV", "Firmware": "02074.00000.15234.28002", "OS": "8.10.14234.375", "DownloadID": 26}
         ]
@@ -1477,6 +1521,7 @@
     {
         "ProductType": "RM-1115",
         "ModelName": "Lumia 532 Dual SIM",
+        "Emergency": {"DownloadID": 86},
         "ProductCodes": [
             {"ProductCode": "059X0W1", "PackageTitle": "RM-1115 VAR LTA BR CV", "Firmware": "02074.00000.15234.28004", "OS": "8.10.14234.375", "DownloadID": 27}
         ]
@@ -1484,6 +1529,7 @@
     {
         "ProductType": "RM-1116",
         "ModelName": "Lumia 950 XL Dual SIM",
+        "Emergency": {"DownloadID": 87},
         "ProductCodes": [
             {"ProductCode": "059X400", "PackageTitle": "RM-1116 GLOBAL SWAP"},
             {"ProductCode": "059X401", "PackageTitle": "RM-1116 INDIA BIS SWAP"},
@@ -1527,6 +1573,7 @@
     {
         "ProductType": "RM-1118",
         "ModelName": "Lumia 950 Dual SIM",
+        "Emergency": {"DownloadID": 88},
         "ProductCodes": [
             {"ProductCode": "059X4F4", "PackageTitle": "PWBASSY RM-1118 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X4F5", "PackageTitle": "RM-1118 GLOBAL BLACK SWAP"},
@@ -1555,6 +1602,7 @@
     {
         "ProductType": "RM-1127",
         "ModelName": "Lumia 550",
+        "Emergency": {"DownloadID": 89},
         "ProductCodes": [
             {"ProductCode": "059X3Z9", "PackageTitle": "PWBASSY RM-1127 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X4D6", "PackageTitle": "RM-1127 GLOBAL SWAP"},
@@ -1618,6 +1666,7 @@
     {
         "ProductType": "RM-1128",
         "ModelName": "Lumia 550",
+        "Emergency": {"DownloadID": 90},
         "ProductCodes": [
             {"ProductCode": "059X403", "PackageTitle": "PWBASSY RM-1128 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X4D8", "PackageTitle": "RM-1128 GLOBAL SWAP"},
@@ -1635,6 +1684,7 @@
     {
         "ProductType": "RM-1133",
         "ModelName": "Nokia 105",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059W9S8", "PackageTitle": "RM-1133 NDT MEA MS BENGALI BD"},
             {"ProductCode": "059W9T0", "PackageTitle": "RM-1133 NDT MEA IB LATIN CM"},
@@ -1680,6 +1730,7 @@
     {
         "ProductType": "RM-1134",
         "ModelName": "Nokia 105",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059X011", "PackageTitle": "RM-1134 NDT EURO AA LATIN FI"},
             {"ProductCode": "059X013", "PackageTitle": "RM-1134 NDT EURO AD LATIN DE"},
@@ -1736,6 +1787,7 @@
     {
         "ProductType": "RM-1135",
         "ModelName": "Nokia 105",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059W9X9", "PackageTitle": "RM-1135 NDT LATAM UA LATIN LTA"}
         ]
@@ -1743,6 +1795,7 @@
     {
         "ProductType": "RM-1136",
         "ModelName": "Nokia 222",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059X2Q0", "PackageTitle": "RM-1136 NDT EURO EI BLACK CYRILLIC RU"},
             {"ProductCode": "059X2Q1", "PackageTitle": "RM-1136 NDT EURO AE BLACK LATIN IT"},
@@ -1814,6 +1867,7 @@
     {
         "ProductType": "RM-1137",
         "ModelName": "Nokia 222",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059X2Q2", "PackageTitle": "RM-1137 SS NDT EURO AE BLACK LATIN IT"},
             {"ProductCode": "059X2R4", "PackageTitle": "RM-1137 SS NDT EURO EI BLACK CYRILLIC RU"},
@@ -1890,6 +1944,7 @@
     {
         "ProductType": "RM-1140",
         "ModelName": "Lumia 540 Dual SIM",
+        "Emergency": {"DownloadID": 91},
         "ProductCodes": [
             {"ProductCode": "059X0S8", "PackageTitle": "PWBASSY RM-1140 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X1V3", "PackageTitle": "PWBASSY RM-1140 LIGHT SWAP ENGINE PH"},
@@ -1902,6 +1957,7 @@
     {
         "ProductType": "RM-1141",
         "ModelName": "Lumia 540 Dual SIM",
+        "Emergency": {"DownloadID": 92},
         "ProductCodes": [
             {"ProductCode": "059X0T0", "PackageTitle": "PWBASSY RM-1141 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X173", "PackageTitle": "RM-1141 GLOBAL SWAP"},
@@ -1930,6 +1986,7 @@
     {
         "ProductType": "RM-1150",
         "ModelName": "Lumia 650",
+        "Emergency": {"DownloadID": 93},
         "ProductCodes": [
             {"ProductCode": "059X6M5", "PackageTitle": "RM-1150 VAR NAM US CRICKET SL BLACK"},
             {"ProductCode": "059X6P6", "PackageTitle": "VAR LTA 7R CV BLK_DR"},
@@ -1947,6 +2004,7 @@
     {
         "ProductType": "RM-1152",
         "ModelName": "Lumia 650",
+        "Emergency": {"DownloadID": 94},
         "ProductCodes": [
             {"ProductCode": "059X6C2", "PackageTitle": "PWBASSY RM-1152 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X6C9", "PackageTitle": "RM-1152 GLOBAL WHITE LIGHT SILVER SWAP"},
@@ -1999,7 +2057,7 @@
             {"ProductCode": "059X737", "PackageTitle": "VAR EURO PT MEO WHT_LG"},
             {"ProductCode": "059X753", "PackageTitle": "VAR EURO FR ORANGE BLK_DR"},
             {"ProductCode": "059X754", "PackageTitle": "VAR EURO FR ORANGE WHT_LG"},
-            {"ProductCode": "059X757", "PackageTitle": "VAR EURO 6A CV BLK_DR"},
+            {"ProductCode": "059X757", "PackageTitle": "VAR EURO 6A CV BLK_DR", "Firmware": "01078.00042.16352.50006", "OS": "10.0.10586.494", "DownloadID": 82},
             {"ProductCode": "059X758", "PackageTitle": "VAR EURO 6A CV WHT_LG"},
             {"ProductCode": "059X782", "PackageTitle": "VAR EURO GB EE BLK_DR SL"},
             {"ProductCode": "059X788", "PackageTitle": "RM-1152 VAR EURO RO VF WHT_LG SL"},
@@ -2032,9 +2090,10 @@
     {
         "ProductType": "RM-1153",
         "ModelName": "Lumia 650",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059X7M6", "PackageTitle": "RM-1153 VAR APAC AU CV WHT_LG"},
-            {"ProductCode": "059X7M7", "PackageTitle": "RM-1153 VAR APAC AU CV BLK_DRK_S"},
+            {"ProductCode": "059X7M7", "PackageTitle": "RM-1153 VAR APAC AU CV BLK_DRK_S", "Firmware": "01078.00042.16352.50003", "OS": "10.0.10586.494", "DownloadID": 83},
             {"ProductCode": "059X7M8", "PackageTitle": "RM-1153 VAR APAC AU OPTUS WHT_LG"},
             {"ProductCode": "059X7M9", "PackageTitle": "RM-1153 VAR APAC AU OPTUS BLK_DRK_S"},
             {"ProductCode": "059X7N0", "PackageTitle": "RM-1153 VAR APAC AU TELSTRA WHT_LG"},
@@ -2044,6 +2103,7 @@
     {
         "ProductType": "RM-1154",
         "ModelName": "Lumia 650 Dual SIM",
+        "Emergency": {"DownloadID": 95},
         "ProductCodes": [
             {"ProductCode": "059X6D2", "PackageTitle": "PWBASSY RM-1154 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059X6D3", "PackageTitle": "RM-1154 GLOBAL BLACK DARK SILVER SWAP"},
@@ -2073,7 +2133,7 @@
             {"ProductCode": "059X745", "PackageTitle": "VAR IMEA A7 CV WHT_LG"},
             {"ProductCode": "059X749", "PackageTitle": "VAR LTA 7R CV BLK_DR"},
             {"ProductCode": "059X752", "PackageTitle": "VAR IMEA A3 CV BLK_DR"},
-            {"ProductCode": "059X767", "PackageTitle": "VAR EURO 6A CV BLK_DR"},
+            {"ProductCode": "059X767", "PackageTitle": "VAR EURO 6A CV BLK_DR", "Firmware": "01078.00042.16352.50005", "OS": "10.0.10586.494", "DownloadID": 84},
             {"ProductCode": "059X768", "PackageTitle": "VAR EURO 6A CV WHT_LG"},
             {"ProductCode": "059X772", "PackageTitle": "VAR APAC VN CV BLK_DR"},
             {"ProductCode": "059X773", "PackageTitle": "VAR APAC VN CV WHT_LG"},
@@ -2094,6 +2154,7 @@
     {
         "ProductType": "RM-775",
         "ModelName": "Nokia X3-02",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059H294", "PackageTitle": "RM-775 EURO-C WHITE LATIN"},
             {"ProductCode": "059H295", "PackageTitle": "RM-775 EURO-C BLUE LATIN"},
@@ -2521,6 +2582,7 @@
     {
         "ProductType": "RM-801",
         "ModelName": "Lumia 800",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059J3G0", "PackageTitle": "RM-801 NDT EURO1 MATT BLACK"},
             {"ProductCode": "059J3G1", "PackageTitle": "RM-801 NDT EURO1 GLOSS WHITE"},
@@ -2920,7 +2982,7 @@
             {"ProductCode": "059Q0W3", "PackageTitle": "Nokia 800 RM-801 Country Variant Lebanon LB White_V2_COLOR"},
             {"ProductCode": "059Q0W5", "PackageTitle": "Nokia 800 RM-801 Country Variant Tunisia TN Magenta_V2_COLOR"},
             {"ProductCode": "059Q0W6", "PackageTitle": "Nokia 800 RM-801 Country Variant Tunisia TN White_V2_COLOR"},
-            {"ProductCode": "059Q201", "PackageTitle": "Nokia 800 RM-801 Everything Everywhere UK GB Matt Black GV"},
+            {"ProductCode": "059Q201", "PackageTitle": "Nokia 800 RM-801 Everything Everywhere UK GB Matt Black GV", "Firmware": "1750.0805.8773.12220", "OS": null, "DownloadID": 61},
             {"ProductCode": "059Q213", "PackageTitle": "Nokia 800 RM-801 Tesco UK GB V1 Tesco Black"},
             {"ProductCode": "059Q216", "PackageTitle": "Nokia 800 RM-801 CV PK Lumia 800 Pakistan Cyan V1"},
             {"ProductCode": "059Q218", "PackageTitle": "Nokia 800 RM-801 CV PK Lumia 800 Pakistan Magenta V1"},
@@ -2948,6 +3010,7 @@
     {
         "ProductType": "RM-802",
         "ModelName": "Lumia 800",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059K5R5", "PackageTitle": "NDT CT MATT BLACK"},
             {"ProductCode": "059L6W3", "PackageTitle": "NDT CT MATT CYAN"},
@@ -2959,6 +3022,7 @@
     {
         "ProductType": "RM-803",
         "ModelName": "Lumia 710",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059H4J1", "PackageTitle": "RM-803 NDT BLACK ROW1"},
             {"ProductCode": "059K9B6", "PackageTitle": "RM-803 NDT WHITE ROW1"},
@@ -3170,6 +3234,7 @@
     {
         "ProductType": "RM-808",
         "ModelName": "Lumia 900",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059L6S0", "PackageTitle": "RM-808 VAR ATT BLACK"},
             {"ProductCode": "059M414", "PackageTitle": "RM-808 ATT RETAIL DEVICE ALIVE BLACK"},
@@ -3189,6 +3254,7 @@
     {
         "ProductType": "RM-809",
         "ModelName": "Lumia 710",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059J4H8", "PackageTitle": "RM-809 NDT BLACK ROW2"},
             {"ProductCode": "059K259", "PackageTitle": "RM-809 NDT NAM WHITE"},
@@ -3282,6 +3348,7 @@
     {
         "ProductType": "RM-819",
         "ModelName": "Lumia 800",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059L9Q0", "PackageTitle": "Nokia 800 RM-819 Telus CA black V2"},
             {"ProductCode": "059M182", "PackageTitle": "RM-819_NAM_US_CV_VAR191237_BLACK_V1"},
@@ -3396,6 +3463,7 @@
     {
         "ProductType": "RM-820",
         "ModelName": "Lumia 920",
+        "Emergency": {"DownloadID": 2 },
         "ProductCodes": [
             {"ProductCode": "059L848", "PackageTitle": "RM-820 NDT AMERICA ATT Black"},
             {"ProductCode": "059N5T3", "PackageTitle": "RM-820 NDT AMERICA ATT White"},
@@ -3467,6 +3535,7 @@
     {
         "ProductType": "RM-821",
         "ModelName": "Lumia 920",
+        "Emergency": {"DownloadID": 3},
         "ProductCodes": [
             {"ProductCode": "059P632", "PackageTitle": "PWBASSY RM-821- LIGHT SWAP ENG GLOBAL"},
             {"ProductCode": "059Q5C6", "PackageTitle": "RM-821 GLOBAL BLACK SWAP"},
@@ -3944,6 +4013,7 @@
     {
         "ProductType": "RM-822",
         "ModelName": "Lumia 920",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059R2R0", "PackageTitle": "PWBASSY RM-822 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059R4D6", "PackageTitle": "RM-822 VAR APAC CN CHINAUNICOM BLACK"},
@@ -3961,6 +4031,7 @@
     {
         "ProductType": "RM-823",
         "ModelName": "Lumia 900",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059K198", "PackageTitle": "RM-823 ACE ROW NDT GENERIC"},
             {"ProductCode": "059M3L5", "PackageTitle": "PWBASSY RM-823 LIGHT SWAP ENGINE GLOBAL"},
@@ -4269,10 +4340,11 @@
     {
         "ProductType": "RM-824",
         "ModelName": "Lumia 820",
+        "Emergency": {"DownloadID": 4},
         "ProductCodes": [
             {"ProductCode": "059M0F3", "PackageTitle": "RM-824 NDT AMERICA US ATT"},
             {"ProductCode": "059R4Q5", "PackageTitle": "RM-824_lta_lta1_SWAP_SW_Default"},
-            {"ProductCode": "059R4Q6", "PackageTitle": "RM-824 lta lta1 GLOBAL Swap"},
+            {"ProductCode": "059R4Q6", "PackageTitle": "RM-824 lta lta1 GLOBAL Swap", "Firmware": "1232.5951.1249.0001", "OS": null, "DownloadID": 62},
             {"ProductCode": "059R6K2", "PackageTitle": "RM-824 ATT PR1.1 Light SWAP"},
             {"ProductCode": "059R7G6", "PackageTitle": "RM-824 VAR AMERICA LTA1 UY&PY CV"},
             {"ProductCode": "059R8N0", "PackageTitle": "RM-824 VAR AMERICA LTA1 CO&EC CV"},
@@ -4293,6 +4365,7 @@
     {
         "ProductType": "RM-825",
         "ModelName": "Lumia 820",
+        "Emergency": {"DownloadID": 5},
         "ProductCodes": [
             {"ProductCode": "059P3W9", "PackageTitle": "RM-825 GLOBAL LIGHT SWAP PACKAGE"},
             {"ProductCode": "059P8V6", "PackageTitle": "RM-825 GLOBAL SWAP"},
@@ -4311,7 +4384,7 @@
             {"ProductCode": "059Q8W4", "PackageTitle": "RM-825 VAR EURO2 DE VODAFONE D2"},
             {"ProductCode": "059Q8W8", "PackageTitle": "RM-825 VAR EU BE CV"},
             {"ProductCode": "059Q954", "PackageTitle": "RM-825 VAR APAC SG STARHUB"},
-            {"ProductCode": "059Q961", "PackageTitle": "RM-825 VAR EU RU CV"},
+            {"ProductCode": "059Q961", "PackageTitle": "RM-825 VAR EU RU CV", "Firmware": "3051.50009.1424.0008", "OS": null, "DownloadID": 63},
             {"ProductCode": "059Q964", "PackageTitle": "RM-825 VAR EU RU MTS"},
             {"ProductCode": "059Q987", "PackageTitle": "RM-825 VAR APAC SG SINGTEL"},
             {"ProductCode": "059Q995", "PackageTitle": "RM-825 VAR APAC SG CV"},
@@ -4426,16 +4499,18 @@
     {
         "ProductType": "RM-826",
         "ModelName": "Lumia 820",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059R4C4", "PackageTitle": "RM-826 VAR APAC CN CV"},
             {"ProductCode": "059R4F3", "PackageTitle": "RM-826 VAR IMEA IN CV"},
-            {"ProductCode": "059R4W2", "PackageTitle": "RM-826 LIGHT SWAP ENGINE GLOBAL"},
+            {"ProductCode": "059R4W2", "PackageTitle": "RM-826 LIGHT SWAP ENGINE GLOBAL", "Firmware": "1232.5951.1249.1001", "OS": null, "DownloadID": 64},
             {"ProductCode": "059R661", "PackageTitle": "INDIA SWAP PACKAGE"}
         ]
     },
     {
         "ProductType": "RM-835",
         "ModelName": "Lumia 610",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059L3R8", "PackageTitle": "CTR BLACK"},
             {"ProductCode": "059N770", "PackageTitle": "RM-835 GLOBAL BLACK SWAP"},
@@ -4856,6 +4931,7 @@
     {
         "ProductType": "RM-836",
         "ModelName": "Lumia 610",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059N197", "PackageTitle": "NDT CHINA CYAN"},
             {"ProductCode": "059N288", "PackageTitle": "NDT CHINA BLACK"},
@@ -4866,6 +4942,7 @@
     {
         "ProductType": "RM-845",
         "ModelName": "Lumia 822",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059P3Z8", "PackageTitle": "RM-845 VAR VRZ WHITE"},
             {"ProductCode": "059P497", "PackageTitle": "RM-845 VAR VRZ RED"},
@@ -4876,6 +4953,7 @@
     {
         "ProductType": "RM-846",
         "ModelName": "Lumia 620",
+        "Emergency": {"DownloadID": 6},
         "ProductCodes": [
             {"ProductCode": "059P927", "PackageTitle": "PWBASSY RM-846 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059Q217", "PackageTitle": "PWBASSY RM-846 LIGHT SWAP ENGINE CHINA"},
@@ -5010,6 +5088,7 @@
     {
         "ProductType": "RM-849",
         "ModelName": "Lumia 610",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059P5C8", "PackageTitle": "NDT EU EURO1 MAGENTA", "Firmware": "1102.0000.8779.12221", "OS": null, "DownloadID": 37},
             {"ProductCode": "059P6C3", "PackageTitle": "RM-849 VAR EU FR ORANGE SL BLACK"},
@@ -5029,6 +5108,7 @@
     {
         "ProductType": "RM-860",
         "ModelName": "Lumia 928",
+        "Emergency": {"DownloadID": 7},
         "ProductCodes": [
             {"ProductCode": "059R224", "PackageTitle": "RM-860 VAR VRZ BLACK"},
             {"ProductCode": "059R225", "PackageTitle": "RM-860 VAR VRZ WHITE"},
@@ -5038,6 +5118,7 @@
     {
         "ProductType": "RM-867",
         "ModelName": "Lumia 920T",
+        "Emergency": {"DownloadID": 8},
         "ProductCodes": [
             {"ProductCode": "059Q203", "PackageTitle": "RM-867 CTR CMCC CHINA BLACK"},
             {"ProductCode": "059Q5M5", "PackageTitle": "RM-867 CTR CMCC CHINA WHITE"},
@@ -5050,6 +5131,7 @@
     {
         "ProductType": "RM-875",
         "ModelName": "Lumia 1020",
+        "Emergency": {"DownloadID": 9},
         "ProductCodes": [
             {"ProductCode": "059S931", "PackageTitle": "RM-875 VAR EURO GB EE SL BLACK"},
             {"ProductCode": "059S941", "PackageTitle": "RM-875 VAR FR ORANGE SL BLACK"},
@@ -5266,6 +5348,7 @@
     {
         "ProductType": "RM-876",
         "ModelName": "Lumia 1020",
+        "Emergency": {"DownloadID": 10},
         "ProductCodes": [
             {"ProductCode": "059T3B3", "PackageTitle": "RM-876 VAR APAC CN CHINA UNICOM BLACK"},
             {"ProductCode": "059T3B4", "PackageTitle": "RM-876 VAR APAC CN CHINA UNICOM WHITE"},
@@ -5275,6 +5358,7 @@
     {
         "ProductType": "RM-877",
         "ModelName": "Lumia 1020",
+        "Emergency": {"DownloadID": 11},
         "ProductCodes": [
             {"ProductCode": "059S9T1", "PackageTitle": "RM-877 VAR NAM US ATT SL BLACK"},
             {"ProductCode": "059T013", "PackageTitle": "RM-877 VAR NAM US ATT SL WHITE"},
@@ -5315,13 +5399,15 @@
     {
         "ProductType": "RM-878",
         "ModelName": "Lumia 810",
+        "Emergency": {},
         "ProductCodes": [
-            {"ProductCode": "059Q1J2", "PackageTitle": "RM-878 VAR US TMOBILE SL BLACK"}
+            {"ProductCode": "059Q1J2", "PackageTitle": "RM-878 VAR US TMOBILE SL BLACK", "Firmware": "3043.0000.1326.0017", "OS": null, "DownloadID": 65}
         ]
     },
     {
         "ProductType": "RM-885",
         "ModelName": "Lumia 720",
+        "Emergency": {"DownloadID": 12},
         "ProductCodes": [
             {"ProductCode": "059R0Q1", "PackageTitle": "RM-885 NDT White APAC Vietnam"},
             {"ProductCode": "059S088", "PackageTitle": "PWBASSY RM-885 LIGHT SWAP ENG GLOBAL"},
@@ -5380,7 +5466,7 @@
             {"ProductCode": "059S2T7", "PackageTitle": "RM-885 VAR RU CV YELLOW"},
             {"ProductCode": "059S2T8", "PackageTitle": "RM-885 VAR RU CV BLACK"},
             {"ProductCode": "059S2T9", "PackageTitle": "RM-885 VAR RU CV RED"},
-            {"ProductCode": "059S2V0", "PackageTitle": "RM-885 VAR RU CV WHITE"},
+            {"ProductCode": "059S2V0", "PackageTitle": "RM-885 VAR RU CV WHITE", "Firmware": "3058.50000.1425.0005", "OS": "8.10.12393.890", "DownloadID": 67},
             {"ProductCode": "059S2V7", "PackageTitle": "RM-885 VAR EURO2 DE VODAFONE D2 BLACK"},
             {"ProductCode": "059S2V9", "PackageTitle": "RM-885 VAR ES VODAFONE SL BLACK"},
             {"ProductCode": "059S2W0", "PackageTitle": "RM-885 VAR IT VODAFONE BLACK"},
@@ -5409,7 +5495,7 @@
             {"ProductCode": "059S368", "PackageTitle": "RM-885 VAR BR MANAUS CLARO WHITE"},
             {"ProductCode": "059S369", "PackageTitle": "RM-885 VAR BR MANAUS CV BLACK"},
             {"ProductCode": "059S370", "PackageTitle": "RM-885 VAR BR MANAUS CV WHITE"},
-            {"ProductCode": "059S375", "PackageTitle": "RM-885 VAR AU VODAFONE WHITE"},
+            {"ProductCode": "059S375", "PackageTitle": "RM-885 VAR AU VODAFONE WHITE", "Firmware": "3058.51000.1505.0010", "OS": "8.10.14234.375", "DownloadID": 66},
             {"ProductCode": "059S376", "PackageTitle": "RM-885 VAR APAC MY CV BLACK"},
             {"ProductCode": "059S377", "PackageTitle": "RM-885 VAR APAC MY CV YELLOW"},
             {"ProductCode": "059S378", "PackageTitle": "RM-885 VAR APAC MY CV RED"},
@@ -5677,17 +5763,19 @@
     {
         "ProductType": "RM-887",
         "ModelName": "Lumia 720T",
+        "Emergency": {"DownloadID": 13},
         "ProductCodes": [
             {"ProductCode": "059S313", "PackageTitle": "RM-887 VAR CN CHINAMOBILE WHITE"},
             {"ProductCode": "059S315", "PackageTitle": "RM-887 VAR CN CHINAMOBILE YELLOW"},
             {"ProductCode": "059S316", "PackageTitle": "RM-887 VAR CN CHINAMOBILE BLACK"},
-            {"ProductCode": "059S317", "PackageTitle": "RM-887 VAR CN CHINAMOBILE CYAN"},
+            {"ProductCode": "059S317", "PackageTitle": "RM-887 VAR CN CHINAMOBILE CYAN", "Firmware": "3058.50000.1424.0003", "OS": "8.10.12393.890", "DownloadID": 68},
             {"ProductCode": "059S318", "PackageTitle": "RM-887 VAR CN CHINAMOBILE RED"}
         ]
     },
     {
         "ProductType": "RM-889",
         "ModelName": "Lumia 510",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059Q7J5", "PackageTitle": "RM-889 GLOBAL SWAP PACK"},
             {"ProductCode": "059Q7J6", "PackageTitle": "RM-889 GLOBAL LIGHT SWAP PACKAGE"},
@@ -5792,6 +5880,7 @@
     {
         "ProductType": "RM-892",
         "ModelName": "Lumia 925",
+        "Emergency": {"DownloadID": 14},
         "ProductCodes": [
             {"ProductCode": "059S4J7", "PackageTitle": "RM-892 VAR FI CV BLACK"},
             {"ProductCode": "059S5L4", "PackageTitle": "RM-892 GLOBAL WHITE SWAP"},
@@ -6026,6 +6115,7 @@
     {
         "ProductType": "RM-893",
         "ModelName": "Lumia 925",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059S5C4", "PackageTitle": "RM-893 VAR US T-MOBILE SL WHITE"},
             {"ProductCode": "059S6H3", "PackageTitle": "RM-893 VAR LTA AV BLACK"},
@@ -6059,6 +6149,7 @@
     {
         "ProductType": "RM-898",
         "ModelName": "Lumia 510",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059R1V6", "PackageTitle": "RM-898_Country_Variant_PR_VAR259108_Black"},
             {"ProductCode": "059R2B2", "PackageTitle": "RM-898 VAR LTA-GENERIC MX TELCEL SL BLK"},
@@ -6099,6 +6190,7 @@
     {
         "ProductType": "RM-910",
         "ModelName": "Lumia 925",
+        "Emergency": {"DownloadID": 15},
         "ProductCodes": [
             {"ProductCode": "059S6S1", "PackageTitle": "RM-910 VAR CN CHINA UNICOM BLACK"},
             {"ProductCode": "059S6S4", "PackageTitle": "RM-910 VAR CN CHINA UNICOM WHITE"},
@@ -6138,6 +6230,7 @@
     {
         "ProductType": "RM-913",
         "ModelName": "Lumia 520",
+        "Emergency": {"DownloadID": 16},
         "ProductCodes": [
             {"ProductCode": "059S0P9", "PackageTitle": "PWBASSY RM-913 LIGHT SWAP ENG CN", "Firmware": "1393.0000.1316.1001", "OS": null, "DownloadID": 28},
             {"ProductCode": "059S320", "PackageTitle": "RM-913 VAR CN CHINAMOBILE"}
@@ -6146,6 +6239,7 @@
     {
         "ProductType": "RM-914",
         "ModelName": "Lumia 520",
+        "Emergency": {"DownloadID": 17},
         "ProductCodes": [
             {"ProductCode": "059R9Z8", "PackageTitle": "PWBASSY RM-914 LIGHT SWAP ENG GLOBAL"},
             {"ProductCode": "059S083", "PackageTitle": "RM-914 VAR EU-EURO2 DE CV"},
@@ -6282,6 +6376,7 @@
     {
         "ProductType": "RM-915",
         "ModelName": "Lumia 520",
+        "Emergency": {"DownloadID": 18},
         "ProductCodes": [
             {"ProductCode": "059S218", "PackageTitle": "RM-915 VAR LATAM BR CLARO"},
             {"ProductCode": "059S2D1", "PackageTitle": "PWBASSY RM-915 LIGHT SWAP ENG GLOBAL"},
@@ -6344,6 +6439,7 @@
     {
         "ProductType": "RM-917",
         "ModelName": "Lumia 521",
+        "Emergency": {"DownloadID": 19},
         "ProductCodes": [
             {"ProductCode": "059S000", "PackageTitle": "PWBASSY RM-917 LIGHT SWAP ENG GLOBA"},
             {"ProductCode": "059S0B4", "PackageTitle": "RM-917 VAR US T-MOBILE SL"},
@@ -6353,6 +6449,7 @@
     {
         "ProductType": "RM-923",
         "ModelName": "Lumia 505",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059R4H4", "PackageTitle": "RM-923 VAR LTA MX TELCEL SL BLACK"},
             {"ProductCode": "059R4H9", "PackageTitle": "RM-923 VAR LTA MX TELCEL SL MAGENTA"},
@@ -6370,6 +6467,7 @@
     {
         "ProductType": "RM-927",
         "ModelName": "Lumia 929 Icon",
+        "Emergency": {"DownloadID": 20},
         "ProductCodes": [
             {"ProductCode": "059S694", "PackageTitle": "RM-927 VAR VZN BLACK"},
             {"ProductCode": "059T4M7", "PackageTitle": "RM-927 VAR VZN WHITE"}
@@ -6378,6 +6476,7 @@
     {
         "ProductType": "RM-937",
         "ModelName": "Lumia 1520",
+        "Emergency": {"DownloadID": 21},
         "ProductCodes": [
             {"ProductCode": "059T2J6", "PackageTitle": "PWBASSY RM-937 LIGHT SWAP ENG RD ROW"},
             {"ProductCode": "059T959", "PackageTitle": "RM-937 GLOBAL WHITE SWAP"},
@@ -6530,6 +6629,7 @@
     {
         "ProductType": "RM-938",
         "ModelName": "Lumia 1520",
+        "Emergency": {"DownloadID": 22},
         "ProductCodes": [
             {"ProductCode": "059V3K8", "PackageTitle": "RM-938 AMERICAS BLACK SWAP"},
             {"ProductCode": "059V3L0", "PackageTitle": "RM-938 AMERICAS WHITE SWAP"},
@@ -6561,6 +6661,7 @@
     {
         "ProductType": "RM-939",
         "ModelName": "Lumia 1520",
+        "Emergency": {"DownloadID": 23},
         "ProductCodes": [
             {"ProductCode": "059V1V6", "PackageTitle": "PWBASSY RM-939 LIGHT SWAP ENGINE CN"},
             {"ProductCode": "059V3B1", "PackageTitle": "RM-939 VAR APAC CN UNICOM RED"},
@@ -6573,6 +6674,7 @@
     {
         "ProductType": "RM-940",
         "ModelName": "Lumia 1520",
+        "Emergency": {"DownloadID": 24},
         "ProductCodes": [
             {"ProductCode": "059T5X8", "PackageTitle": "RM-940 VAR NAM US ATT SL BLACK"},
             {"ProductCode": "059T5X9", "PackageTitle": "RM-940 VAR NAM US ATT SL WHITE"},
@@ -6587,6 +6689,7 @@
     {
         "ProductType": "RM-941",
         "ModelName": "Lumia 625",
+        "Emergency": {"DownloadID": 25},
         "ProductCodes": [
             {"ProductCode": "059T0C9", "PackageTitle": "PWBASSY RM-941 LIGHT SWAP ENG GLOBAL"},
             {"ProductCode": "059T0D0", "PackageTitle": "RM-941 GLOBAL SWAP"},
@@ -6706,6 +6809,7 @@
     {
         "ProductType": "RM-942",
         "ModelName": "Lumia 625",
+        "Emergency": {"DownloadID": 26},
         "ProductCodes": [
             {"ProductCode": "059T1W1", "PackageTitle": "RM-942 VAR NAM CA TELUS MOBILITY SL"},
             {"ProductCode": "059T1X4", "PackageTitle": "RM-942 VAR NAM CA ROGERS SL"},
@@ -6725,6 +6829,7 @@
     {
         "ProductType": "RM-943",
         "ModelName": "Lumia 625",
+        "Emergency": {},
         "ProductCodes": [
             {"ProductCode": "059T0D8", "PackageTitle": "PWBASSY RM-943 LIGHT SWAP ENG CN"},
             {"ProductCode": "059T3L3", "PackageTitle": "RM-943 VAR APAC CN CU BLACK"},
@@ -6741,6 +6846,7 @@
     {
         "ProductType": "RM-955",
         "ModelName": "Lumia 925T",
+        "Emergency": {"DownloadID": 27},
         "ProductCodes": [
             {"ProductCode": "059S772", "PackageTitle": "RM-955 VAR CN CV TD OPEN BLACK"},
             {"ProductCode": "059S7B1", "PackageTitle": "RM-955 VAR CN CV TD OPEN WHITE"},
@@ -6750,6 +6856,7 @@
     {
         "ProductType": "RM-974",
         "ModelName": "Lumia 635",
+        "Emergency": {"DownloadID": 28},
         "ProductCodes": [
             {"ProductCode": "059V4Z9", "PackageTitle": "RM-974 GLOBAL SWAP"},
             {"ProductCode": "059V544", "PackageTitle": "PWBASSY RM-974 LIGHT SWAP ENGINE GLOBAL"},
@@ -6882,6 +6989,7 @@
     {
         "ProductType": "RM-975",
         "ModelName": "Lumia 635",
+        "Emergency": {"DownloadID": 29},
         "ProductCodes": [
             {"ProductCode": "059V542", "PackageTitle": "PWBASSY RM-975 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059V6W5", "PackageTitle": "RM-975 VAR NAM US T-MOBILE SL WHITE"},
@@ -6926,6 +7034,7 @@
     {
         "ProductType": "RM-976",
         "ModelName": "Lumia 630",
+        "Emergency": {"DownloadID": 30},
         "ProductCodes": [
             {"ProductCode": "059T050", "PackageTitle": "RM-976 CTR R&D 3G ROW"},
             {"ProductCode": "059V509", "PackageTitle": "RM-976 GLOBAL SWAP"},
@@ -6985,6 +7094,7 @@
     {
         "ProductType": "RM-977",
         "ModelName": "Lumia 630",
+        "Emergency": {"DownloadID": 31},
         "ProductCodes": [
             {"ProductCode": "059V508", "PackageTitle": "RM-977 GLOBAL SWAP"},
             {"ProductCode": "059V556", "PackageTitle": "PWBASSY RM-977 LIGHT SWAP ENGINE GLOBAL"},
@@ -7015,6 +7125,7 @@
     {
         "ProductType": "RM-978",
         "ModelName": "Lumia 630 Dual SIM",
+        "Emergency": {"DownloadID": 32},
         "ProductCodes": [
             {"ProductCode": "059V506", "PackageTitle": "RM-978 GLOBAL SWAP"},
             {"ProductCode": "059V552", "PackageTitle": "PWBASSY RM-978 LIGHT SWAP ENGINE GLOBAL"},
@@ -7057,6 +7168,7 @@
     {
         "ProductType": "RM-979",
         "ModelName": "Lumia 630 Dual SIM",
+        "Emergency": {"DownloadID": 33},
         "ProductCodes": [
             {"ProductCode": "059V964", "PackageTitle": "RM-979 VAR LTA BR NDB", "Firmware": "02040.00021.15235.50004", "OS": "8.10.14234.375", "DownloadID": 45}
         ]
@@ -7064,6 +7176,7 @@
     {
         "ProductType": "RM-983",
         "ModelName": "Lumia 830",
+        "Emergency": {"DownloadID": 34},
         "ProductCodes": [
             {"ProductCode": "059T3H4", "PackageTitle": "RM-983 NDT ATT DARK GRAY"},
             {"ProductCode": "059V766", "PackageTitle": "RM-983 NDT ATT SILVER"},
@@ -7071,13 +7184,14 @@
             {"ProductCode": "059W4P1", "PackageTitle": "RM-983 VAR US ATT DARK GRAY SL"},
             {"ProductCode": "059W4V9", "PackageTitle": "RM-983 VAR US ATT SILVER SL"},
             {"ProductCode": "059W5H3", "PackageTitle": "RM-983 VAR US ATT DARK GRAY SL DEMO"},
-            {"ProductCode": "059W5H6", "PackageTitle": "RM-983 VAR US ATT SILVER SL DEMO"},
+            {"ProductCode": "059W5H6", "PackageTitle": "RM-983 VAR US ATT SILVER SL DEMO", "Firmware": "02179.00000.15455.24047", "OS": "8.10.15148.160", "DownloadID": 69},
             {"ProductCode": "059X6C6", "PackageTitle": "RM-983 VAR NAM US ATT NYPD SL DARK GREY"}
         ]
     },
     {
         "ProductType": "RM-984",
         "ModelName": "Lumia 830",
+        "Emergency": {"DownloadID": 35},
         "ProductCodes": [
             {"ProductCode": "059V9H6", "PackageTitle": "PWBASSY RM-984 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059W075", "PackageTitle": "RM-984 GLOBAL DARK GREY SWAP"},
@@ -7134,7 +7248,7 @@
             {"ProductCode": "059W5W1", "PackageTitle": "RM-984 VAR EURO 7V VF D GREY SL"},
             {"ProductCode": "059W5W2", "PackageTitle": "RM-984 VAR EURO 7V VF SLV SL"},
             {"ProductCode": "059W5W7", "PackageTitle": "RM-984 VAR EURO 6A CV D GREY"},
-            {"ProductCode": "059W5W8", "PackageTitle": "RM-984 VAR EURO 6A CV SLV"},
+            {"ProductCode": "059W5W8", "PackageTitle": "RM-984 VAR EURO 6A CV SLV", "Firmware": "02177.00000.15184.36003", "OS": "8.10.15148.160", "DownloadID": 70},
             {"ProductCode": "059W5X0", "PackageTitle": "RM-984 VAR EURO 7F CV SLV"},
             {"ProductCode": "059W5X7", "PackageTitle": "RM-984 VAR IMEA 9L CV SLV"},
             {"ProductCode": "059W5X8", "PackageTitle": "RM-984 VAR IMEA 9L CV D GREY"},
@@ -7197,6 +7311,7 @@
     {
         "ProductType": "RM-985",
         "ModelName": "Lumia 830",
+        "Emergency": {"DownloadID": 36},
         "ProductCodes": [
             {"ProductCode": "059W0C6", "PackageTitle": "PWBASSY RM-985 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059W0C7", "PackageTitle": "RM-985 GLOBAL DARK GREY SWAP"},
@@ -7237,13 +7352,14 @@
             {"ProductCode": "059W9C3", "PackageTitle": "RM-985 GLOBAL GOLD SWAP"},
             {"ProductCode": "059X0R1", "PackageTitle": "RM-985 VAR LATAM PE CLARO DARK GREY"},
             {"ProductCode": "059X0R2", "PackageTitle": "RM-985 VAR LATAM PE CLARO SILVER"},
-            {"ProductCode": "059X1B0", "PackageTitle": "RM-985 VAR LTA BR CV GOLD"},
+            {"ProductCode": "059X1B0", "PackageTitle": "RM-985 VAR LTA BR CV GOLD", "Firmware": "02040.00021.15236.02005", "OS": "8.10.14234.375", "DownloadID": 71},
             {"ProductCode": "059X1R3", "PackageTitle": "RM-985 VAR LTA 6F MOVISTAR D GREY"}
         ]
     },
     {
         "ProductType": "RM-994",
         "ModelName": "Lumia 1320",
+        "Emergency": {"DownloadID": 37},
         "ProductCodes": [
             {"ProductCode": "059V2R8", "PackageTitle": "PWBASSY RM-994 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059V2R9", "PackageTitle": "RM-994 GLOBAL SWAP"},
@@ -7315,6 +7431,7 @@
     {
         "ProductType": "RM-995",
         "ModelName": "Lumia 1320",
+        "Emergency": {"DownloadID": 38},
         "ProductCodes": [
             {"ProductCode": "059V2Q5", "PackageTitle": "PWBASSY RM-995 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059V2R1", "PackageTitle": "RM-995 LTA SWAP"},
@@ -7335,6 +7452,7 @@
     {
         "ProductType": "RM-996",
         "ModelName": "Lumia 1320",
+        "Emergency": {"DownloadID": 39},
         "ProductCodes": [
             {"ProductCode": "059V3K9", "PackageTitle": "RM-996 VAR APAC CN CHINA UNICOM"},
             {"ProductCode": "059V569", "PackageTitle": "RM-996 VAR APAC VN CV"}
@@ -7343,6 +7461,7 @@
     {
         "ProductType": "RM-997",
         "ModelName": "Lumia 526",
+        "Emergency": {"DownloadID": 40},
         "ProductCodes": [
             {"ProductCode": "059V2V5", "PackageTitle": "PWBASSY RM-997 LIGHT SWAP ENGINE CN"},
             {"ProductCode": "059V444", "PackageTitle": "RM-997 VAR APAC CN CMCC", "Firmware": "3058.50000.1424.0005", "OS": "8.10.12393.890", "DownloadID": 34}
@@ -7351,6 +7470,7 @@
     {
         "ProductType": "RM-998",
         "ModelName": "Lumia 525",
+        "Emergency": {"DownloadID": 41},
         "ProductCodes": [
             {"ProductCode": "059V2V1", "PackageTitle": "PWBASSY RM-998 LIGHT SWAP ENGINE GLOBAL"},
             {"ProductCode": "059V2V2", "PackageTitle": "RM-998 GLOBAL SWAP"},

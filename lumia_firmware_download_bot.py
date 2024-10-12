@@ -11,7 +11,8 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 # Replace with your bot token
 load_dotenv()
 API_TOKEN = os.getenv("API_TOKEN")
-REPO_CHANNEL = int(os.getenv("REPO_CHANNEL"))
+FIRMWARE_CHANNEL = int(os.getenv("FIRMWARE_CHANNEL"))
+EMERGENCY_CHANNEL = int(os.getenv("EMERGENCY_CHANNEL"))
 UPLOAD_CHANNEL = int(os.getenv("UPLOAD_CHANNEL"))
 REQUEST_CHANNEL = int(os.getenv("REQUEST_CHANNEL"))
 UNBLOCK_CHANNEL = int(os.getenv("UNBLOCK_CHANNEL"))
@@ -208,7 +209,7 @@ def request_firmware(message):
     # Check if the correct number of arguments are provided
     if len(params) < 3:
         bot.reply_to(message,
-                     "<b>Usage:</b>\n\t/request &lt;ProductType&gt; "
+                     "<b>Usage:</b>\n\t\t/request &lt;ProductType&gt; "
                      "&lt;ProductCode&gt;\n\n<b>Example:</b>\n\t\t<code>/request RM-1085 059X4T0</code>\n\n"
                      "Note that abusing this feature will result in you being blocked.",
                      parse_mode='HTML')
@@ -238,15 +239,35 @@ def request_firmware(message):
                               f"product code `{product_code}` is already in the repository\.",
                      parse_mode='MarkdownV2')
     else:
-        bot.send_message(REQUEST_CHANNEL, f"<b>User ID:</b> {message.from_user.id}\n"
-                                          f"<b>Fullname:</b> {message.from_user.full_name}\n"
+        bot.send_message(REQUEST_CHANNEL, f"<b>User ID:</b> <code>{message.from_user.id}</code>\n"
+                                          f"<b>Fullname:</b> <code>{message.from_user.full_name}</code>\n"
                                           f"<b>Username:</b> {'@' + message.from_user.username if message.from_user.username else ''}\n"
-                                          f"<b>Product Type:</b> {product_type}\n"
-                                          f"<b>Product Code:</b> {product_code}",
+                                          f"<b>Product Type:</b> <code>{product_type}</code>\n"
+                                          f"<b>Product Code:</b> <code>{product_code}</code>",
                          parse_mode='HTML')
-        bot.reply_to(message, f"Your request has been successfully accepted\. We will add the firmware for "
-                              f"product type `{product_type}` with product code `{product_code}` as soon as possible\.",
+        bot.reply_to(message, f"Your request has been accepted\. We will add the firmware for "
+                              f"product type `{product_type}` with product code `{product_code}` "
+                              f"as soon as possible and will notify you\.",
                      parse_mode='MarkdownV2')
+
+
+@bot.message_handler(commands=['emergency_files'])
+def get_emergency_files(message):
+    if is_user_blocked(message):
+        return
+
+    markup = ReplyKeyboardMarkup(one_time_keyboard=True, resize_keyboard=True, row_width=2)
+    devices = load_json('devices.json')
+    buttons = [
+        KeyboardButton(device['ProductType'])
+        for device in devices
+        if device['Emergency'].get("DownloadID", None)
+    ]
+    markup.add(*buttons)
+    bot.reply_to(message, "Select your Lumia product type.\nUse /cancel to cancel the action.", reply_markup=markup)
+
+    # Set the user state to indicate they're in the download process
+    user_states[message.from_user.id] = 'awaiting_emergency_files'
 
 
 @bot.message_handler(commands=['unblock'])
@@ -256,15 +277,15 @@ def request_unblock(message):
     # Check if the correct number of arguments are provided
     if len(params) < 2:
         bot.reply_to(message,
-                     "<b>Usage:</b>\n\t/unblock &lt;Reason&gt;\n\n"
+                     "<b>Usage:</b>\n\t\t/unblock &lt;Reason&gt;\n\n"
                      "<b>Example:</b>\n\t\t<code>/unblock Sorry, I will never abuse the bot again.</code>",
                      parse_mode='HTML')
         return
 
-    bot.send_message(UNBLOCK_CHANNEL, f"<b>User ID:</b> {message.from_user.id}\n"
-                                      f"<b>Fullname:</b> {message.from_user.full_name}\n"
+    bot.send_message(UNBLOCK_CHANNEL, f"<b>User ID:</b> <code>{message.from_user.id}</code>\n"
+                                      f"<b>Fullname:</b> <code>{message.from_user.full_name}</code>\n"
                                       f"<b>Username:</b> {'@' + message.from_user.username if message.from_user.username else ''}\n"
-                                      f"<b>Reason:</b> {message.text.split(' ', 1)[1]}",
+                                      f"<b>Reason:</b> <code>{message.text.split(' ', 1)[1]}</code>",
                      parse_mode='HTML')
 
 
@@ -277,7 +298,7 @@ def add_admin(message):
     params = message.text.split()
 
     if len(params) < 2:
-        bot.reply_to(message, "<b>Usage:</b>\n\t/add_admin &lt;UserID&gt;\n\n"
+        bot.reply_to(message, "<b>Usage:</b>\n\t\t/add_admin &lt;UserID&gt;\n\n"
                               "<b>Example:</b>\n\t\t<code>/add_admin 1234567890</code>",
                      parse_mode='HTML')
         return
@@ -316,7 +337,7 @@ def remove_admin(message):
     params = message.text.split()
 
     if len(params) < 2:
-        bot.reply_to(message, "<b>Usage:</b>\n\t/remove_admin &lt;UserID&gt;\n\n"
+        bot.reply_to(message, "<b>Usage:</b>\n\t\t/remove_admin &lt;UserID&gt;\n\n"
                               "<b>Example:</b>\n\t\t<code>/remove_admin 1234567890</code>",
                      parse_mode='HTML')
         return
@@ -349,7 +370,7 @@ def text_user(message):
     params = message.text.split()
 
     if len(params) < 3:
-        bot.reply_to(message, "<b>Usage:</b>\n\t/text_user &lt;UserID&gt &lt;Message&gt;\n\n"
+        bot.reply_to(message, "<b>Usage:</b>\n\t\t/text_user &lt;UserID&gt &lt;Message&gt;\n\n"
                               "<b>Example:</b>\n\t\t<code>/text_user 1234567890 "
                               "Hi! Hope you find using the bot useful.</code>",
                      parse_mode='HTML')
@@ -370,7 +391,8 @@ def notify_users(message):
         return
 
     user_states[message.from_user.id] = 'awaiting_forward_message'
-    bot.reply_to(message, "Send or forward the message you would like to notify.\nUse /cancel to cancel the action.")
+    bot.reply_to(message, "Send or forward the message you would like to notify.\nUse /cancel to cancel the action.",
+                 reply_markup=ReplyKeyboardRemove())
 
 
 @bot.message_handler(commands=['list_admins'])
@@ -382,12 +404,13 @@ def list_admins(message):
 
     content = str()
     for admin in admins:
-        content += (f"\t- UserID: <code>{admin['UserID']}</code>, "
-                    f"Fullname: <code>{admin['Fullname']}</code>, "
+        content += (f"UserID: <code>{admin['UserID']}</code>\n"
+                    f"Fullname: <code>{admin['Fullname']}</code>\n"
                     f"Username: {admin['Username']}\n\n")
 
     if admins:
-        bot.reply_to(message, f"<b>Admin Users</b>\n{content}", parse_mode='HTML')
+        bot.reply_to(message, f"<b>Admin Users</b>\n{content}\nNote that super admins will not be listed here.",
+                     parse_mode='HTML')
     else:
         bot.reply_to(message, "<b>Admin Users</b>\nThere are currently no admins to display.\n"
                               "Super admins will not be listed here.", parse_mode='HTML')
@@ -411,7 +434,7 @@ def get_user_info(message):
     params = message.text.split()
 
     if len(params) < 2:
-        bot.reply_to(message, "<b>Usage:</b>\n\t/get_info &lt;UserID&gt;\n\n"
+        bot.reply_to(message, "<b>Usage:</b>\n\t\t/get_info &lt;UserID&gt;\n\n"
                               "<b>Example:</b>\n\t\t<code>/get_info 1234567890</code>",
                      parse_mode='HTML')
         return
@@ -422,11 +445,10 @@ def get_user_info(message):
     user_id = int(params[1])
 
     user = bot.get_chat(user_id)
-    bot.reply_to(message, f"<b>Fullname:</b> {user.first_name}{' ' + user.last_name if user.last_name else ''}\n"
+    bot.reply_to(message, f"<b>Fullname:</b> <code>{user.first_name}{' ' + user.last_name if user.last_name else ''}</code>\n"
                           f"<b>Username:</b> {'@' + user.username if user.username else ''}\n"
                           f"<b>Type:</b> {user.type}\n"
-                          f"<b>Bio:</b> {user.bio}\n",
-                 parse_mode='HTML')
+                          f"<b>Bio:</b> <code>{user.bio}</code>\n", parse_mode='HTML')
 
 
 @bot.message_handler(commands=['block_user'])
@@ -437,7 +459,7 @@ def block_user(message):
     params = message.text.split()
 
     if len(params) < 3:
-        bot.reply_to(message, "<b>Usage:</b>\n\t/block_user &lt;UserID&gt; &lt;Reason&gt;\n\n"
+        bot.reply_to(message, "<b>Usage:</b>\n\t\t/block_user &lt;UserID&gt; &lt;Reason&gt;\n\n"
                               "<b>Example:</b>\n\t\t<code>/block_user 1234567890 For abusing the bot.</code>",
                      parse_mode='HTML')
         return
@@ -476,7 +498,7 @@ def unblock_user(message):
     params = message.text.split()
 
     if len(params) < 2:
-        bot.reply_to(message, "<b>Usage:</b>\n\t/unblock_user &lt;UserID&gt;\n\n"
+        bot.reply_to(message, "<b>Usage:</b>\n\t\t/unblock_user &lt;UserID&gt;\n\n"
                               "<b>Example:</b>\n\t\t<code>/unblock_user 1234567890</code>",
                      parse_mode='HTML')
         return
@@ -507,9 +529,9 @@ def blocked_users_list(message):
 
     content = str()
     for blocked_user in blocked_users:
-        content += (f"\t- UserID: <code>{blocked_user['UserID']}</code>, "
-                    f"Fullname: <code>{blocked_user['Fullname']}</code>, "
-                    f"Username: {blocked_user['Username']}, "
+        content += (f"UserID: <code>{blocked_user['UserID']}</code>\n"
+                    f"Fullname: <code>{blocked_user['Fullname']}</code>\n"
+                    f"Username: {blocked_user['Username']}\n"
                     f"Reason: <code>{blocked_user['Reason']}</code>\n\n")
 
     if blocked_users:
@@ -551,9 +573,8 @@ def cancel_process(message):
 @bot.message_handler(func=lambda message: message.from_user.id in user_states and user_states[
     message.from_user.id] == 'awaiting_product_type')
 def handle_product_type(message):
-    markup = ReplyKeyboardMarkup(one_time_keyboard=True, resize_keyboard=True, row_width=2)
-
     devices = load_json('devices.json')
+
     if any(device['ProductType'] == message.text.upper() for device in devices):
         buttons = [
             KeyboardButton(product_codes['ProductCode'])
@@ -564,6 +585,7 @@ def handle_product_type(message):
         ]
 
         if len(buttons) > 0:
+            markup = ReplyKeyboardMarkup(one_time_keyboard=True, resize_keyboard=True, row_width=2)
             markup.add(*buttons)
             bot.reply_to(message, "Select your Lumia product code.\nUse /cancel to cancel the action.",
                          reply_markup=markup)
@@ -602,10 +624,10 @@ def handle_product_code(message):
         ][0]
 
         if download_id:
-            bot.copy_message(message.chat.id, REPO_CHANNEL, download_id, reply_to_message_id=message.message_id,
+            bot.copy_message(message.chat.id, FIRMWARE_CHANNEL, download_id, reply_to_message_id=message.message_id,
                              protect_content=True, reply_markup=ReplyKeyboardRemove())
             """msg = bot.send_message(message.chat.id, "Please wait...", reply_markup=ReplyKeyboardRemove())
-            bot.forward_message(message.chat.id, REPO_CHANNEL, download_id, protect_content=True)
+            bot.forward_message(message.chat.id, FIRMWARE_CHANNEL, download_id, protect_content=True)
             bot.delete_message(message.chat.id, msg.message_id)"""
 
             if not is_user_admin_by_id(message.from_user.id):
@@ -618,6 +640,30 @@ def handle_product_code(message):
 
     else:
         bot.reply_to(message, "Please select a valid product code.\nUse /cancel to cancel the action.")
+
+
+@bot.message_handler(func=lambda message: message.from_user.id in user_states and user_states[
+    message.from_user.id] == 'awaiting_emergency_files')
+def handle_emergency_files(message):
+    devices = load_json('devices.json')
+
+    if any(device['ProductType'] == message.text.upper() for device in devices):
+        del user_states[message.from_user.id]
+
+        emergency = next((device['Emergency'] for device in devices
+                          if device['ProductType'] == message.text.upper()
+                          if device['Emergency']), None)
+
+        if emergency:
+            download_id = emergency['DownloadID']
+            bot.copy_message(message.chat.id, EMERGENCY_CHANNEL, download_id, reply_to_message_id=message.message_id,
+                             protect_content=True, reply_markup=ReplyKeyboardRemove())
+        else:
+            bot.reply_to(message, f"There is no emergency flash files available in the repository "
+                                  f"for product type `{message.text}`\.",
+                         parse_mode="MarkdownV2", reply_markup=ReplyKeyboardRemove())
+    else:
+        bot.reply_to(message, "Please select a valid product type.\nUse /cancel to cancel the action.")
 
 
 @bot.message_handler(content_types=['document'],
@@ -643,7 +689,7 @@ def handle_upload_file(message):
                               "Use /cancel to cancel the action.")
 
 
-@bot.message_handler(content_types=['text', 'document'],
+@bot.message_handler(content_types=['text', 'document', 'photo', 'video', 'sticker', 'animation'],
                      func=lambda message: message.from_user.id in user_states and user_states[
                          message.from_user.id] == 'awaiting_forward_message')
 def handle_forward_message(message):
@@ -654,21 +700,18 @@ def handle_forward_message(message):
     del user_states[message.from_user.id]
 
     # Function to send messages
-    def send_message(target_id, content, content_type):
+    def send_message(target_id, source_id, content):
         try:
             bot.get_chat(target_id)
+            bot.copy_message(target_id, source_id, content)
         except:
-            return
-        if content_type == 'text':
-            bot.send_message(target_id, content.text)
-        elif content_type == 'document':
-            bot.send_document(target_id, content.document.file_id, caption=content.caption)
+            pass
 
     msg = bot.send_message(message.chat.id, "Notifying users... please hold on.")
 
     # Notify all users and admins
     for target in users + admins:
-        send_message(target["UserID"], message, message.content_type)
+        send_message(target["UserID"], message.chat.id, message.message_id)
 
     bot.delete_message(message.chat.id, msg.message_id)
     bot.reply_to(message, "All users have been notified.")

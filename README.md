@@ -8,6 +8,7 @@ Recently, the Lumia firmware software repository server went down unexpectedly (
 * download - Download the firmware for your Lumia device.
 * upload - Upload your firmware to the repository.
 * request - Request to add firmware to the download list.
+* emergency_files - Download the emergency files for your device.
 * administrators - Manage the bot.
 * cancel - Cancel any pending action.
 
