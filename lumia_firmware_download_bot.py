@@ -176,7 +176,7 @@ def download_firmware(message):
     buttons = [
         KeyboardButton(device['ProductType'])
         for device in devices
-        if any(product_codes.get('DownloadID', None) for product_codes in device['ProductCodes'])
+        if any(product_codes['DownloadID'] for product_codes in device['ProductCodes'])
     ]
     markup.add(*buttons)
     bot.reply_to(message, "Select your Lumia product type.\nUse /cancel to cancel the action.", reply_markup=markup)
@@ -228,7 +228,7 @@ def request_firmware(message):
         product_codes = device['ProductCodes']
         code = next((pc for pc in product_codes if pc['ProductCode'] == product_code), None)
         valid_product_code = code is not None
-        already_exists = code.get('DownloadID') is not None if code else False
+        already_exists = code['DownloadID'] is not None if code else False
 
     if not valid_product_type:
         bot.reply_to(message, "Please enter a valid product type.")
@@ -261,7 +261,7 @@ def get_emergency_files(message):
     buttons = [
         KeyboardButton(device['ProductType'])
         for device in devices
-        if device['Emergency'].get("DownloadID", None)
+        if device['Emergency']["DownloadID"]
     ]
     markup.add(*buttons)
     bot.reply_to(message, "Select your Lumia product type.\nUse /cancel to cancel the action.", reply_markup=markup)
@@ -445,10 +445,11 @@ def get_user_info(message):
     user_id = int(params[1])
 
     user = bot.get_chat(user_id)
-    bot.reply_to(message, f"<b>Fullname:</b> <code>{user.first_name}{' ' + user.last_name if user.last_name else ''}</code>\n"
-                          f"<b>Username:</b> {'@' + user.username if user.username else ''}\n"
-                          f"<b>Type:</b> {user.type}\n"
-                          f"<b>Bio:</b> <code>{user.bio}</code>\n", parse_mode='HTML')
+    bot.reply_to(message,
+                 f"<b>Fullname:</b> <code>{user.first_name}{' ' + user.last_name if user.last_name else ''}</code>\n"
+                 f"<b>Username:</b> {'@' + user.username if user.username else ''}\n"
+                 f"<b>Type:</b> {user.type}\n"
+                 f"<b>Bio:</b> <code>{user.bio}</code>\n", parse_mode='HTML')
 
 
 @bot.message_handler(commands=['block_user'])
@@ -581,7 +582,7 @@ def handle_product_type(message):
             for device in devices
             if device['ProductType'] == message.text.upper()  # Filter based on ProductType
             for product_codes in device['ProductCodes']
-            if product_codes.get('DownloadID', None)
+            if product_codes['DownloadID']
         ]
 
         if len(buttons) > 0:
@@ -618,26 +619,28 @@ def handle_product_code(message):
                                   for product_codes in device['ProductCodes'])][0]
 
         download_id = [
-            product_codes.get('DownloadID', None)
+            product_codes['DownloadID']
             for product_codes in matching_device['ProductCodes']
             if product_codes['ProductCode'] == message.text.upper()
         ][0]
 
-        if download_id:
-            bot.copy_message(message.chat.id, FIRMWARE_CHANNEL, download_id, reply_to_message_id=message.message_id,
+        if len(download_id) == 1:
+            bot.copy_message(message.chat.id, FIRMWARE_CHANNEL, download_id[0], reply_to_message_id=message.message_id,
                              protect_content=True, reply_markup=ReplyKeyboardRemove())
             """msg = bot.send_message(message.chat.id, "Please wait...", reply_markup=ReplyKeyboardRemove())
             bot.forward_message(message.chat.id, FIRMWARE_CHANNEL, download_id, protect_content=True)
             bot.delete_message(message.chat.id, msg.message_id)"""
-
-            if not is_user_admin_by_id(message.from_user.id):
-                save_user_data(message.from_user)
+        elif len(download_id) > 1:
+            bot.copy_messages(message.chat.id, FIRMWARE_CHANNEL, download_id, protect_content=True)
         else:
             bot.reply_to(message, f"There is no firmware available in the repository for "
                                   f"product type `{matching_device['ProductType']}` with "
                                   f"product code `{message.text}`, but you can request it using /request\.",
                          parse_mode='MarkdownV2', reply_markup=ReplyKeyboardRemove())
+            return
 
+        if not is_user_admin_by_id(message.from_user.id):
+            save_user_data(message.from_user)
     else:
         bot.reply_to(message, "Please select a valid product code.\nUse /cancel to cancel the action.")
 
@@ -650,12 +653,11 @@ def handle_emergency_files(message):
     if any(device['ProductType'] == message.text.upper() for device in devices):
         del user_states[message.from_user.id]
 
-        emergency = next((device['Emergency'] for device in devices
-                          if device['ProductType'] == message.text.upper()
-                          if device['Emergency']), None)
+        download_id = next((device['Emergency']['DownloadID'] for device in devices
+                            if device['ProductType'] == message.text.upper()
+                            if device['Emergency']['DownloadID']), None)
 
-        if emergency:
-            download_id = emergency['DownloadID']
+        if download_id:
             bot.copy_message(message.chat.id, EMERGENCY_CHANNEL, download_id, reply_to_message_id=message.message_id,
                              protect_content=True, reply_markup=ReplyKeyboardRemove())
         else:
