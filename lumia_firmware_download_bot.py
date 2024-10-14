@@ -166,7 +166,7 @@ def download_firmware(message):
         if not allowed:
             hours, remainder = divmod(time_left.total_seconds(), 3600)
             minutes, seconds = divmod(remainder, 60)
-            bot.reply_to(message, f"You have reached your daily limit of download requests. "
+            bot.reply_to(message, f"You have reached your limit of download requests. "
                                   f"You can download again in {int(hours)} hours, {int(minutes) + 1} minutes.",
                          parse_mode='HTML')
             return
@@ -191,9 +191,11 @@ def upload_firmware(message):
         return
 
     user_states[message.from_user.id] = 'awaiting_upload_firmware'
-    bot.reply_to(message, "Please send or forward your firmware package in ZIP format. "
-                          "Otherwise, it will be rejected. Additionally, "
-                          "specify the caption for the firmware product type, product code, or any relevant message.\n"
+    bot.reply_to(message, "Please send or forward your firmware package in ZIP format, "
+                          "including a caption that specifies the firmware product type and product code. "
+                          "You may also include any relevant messages if you wish. "
+                          "Packages that do not meet these requirements, such as ZIP format and the necessary caption, "
+                          "will be rejected.\n"
                           "Use /cancel to cancel the action.\n\n"
                           "Note that sending or forwarding irrelevant files may result in you being blocked.",
                  reply_markup=ReplyKeyboardRemove())
@@ -382,6 +384,7 @@ def text_user(message):
     user_id = int(params[1])
 
     bot.send_message(user_id, " ".join(message.text.split()[2:]))
+    bot.reply_to(message, "The user has been notified.")
 
 
 @bot.message_handler(commands=['notify_all'])
@@ -627,10 +630,9 @@ def handle_product_code(message):
         if len(download_id) == 1:
             bot.copy_message(message.chat.id, FIRMWARE_CHANNEL, download_id[0], reply_to_message_id=message.message_id,
                              protect_content=True, reply_markup=ReplyKeyboardRemove())
-            """msg = bot.send_message(message.chat.id, "Please wait...", reply_markup=ReplyKeyboardRemove())
-            bot.forward_message(message.chat.id, FIRMWARE_CHANNEL, download_id, protect_content=True)
-            bot.delete_message(message.chat.id, msg.message_id)"""
         elif len(download_id) > 1:
+            msg = bot.send_message(message.chat.id, "Please wait...", reply_markup=ReplyKeyboardRemove())
+            bot.delete_message(message.chat.id, msg.message_id)
             bot.copy_messages(message.chat.id, FIRMWARE_CHANNEL, download_id, protect_content=True)
         else:
             bot.reply_to(message, f"There is no firmware available in the repository for "
