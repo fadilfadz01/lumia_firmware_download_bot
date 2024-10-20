@@ -230,7 +230,7 @@ def request_firmware(message):
         product_codes = device['ProductCodes']
         code = next((pc for pc in product_codes if pc['ProductCode'] == product_code), None)
         valid_product_code = code is not None
-        already_exists = code['DownloadID'] is not None if code else False
+        already_exists = code['DownloadID'] is not None if code['DownloadID'] else False
 
     if not valid_product_type:
         bot.reply_to(message, "Please enter a valid product type.")
